@@ -55,7 +55,9 @@ html {
 
 
 /* 5. Footer Styles */
-
+.form-label {
+    display: none;
+}
 
 
 
@@ -86,7 +88,9 @@ html {
 
 
     /* 5. Footer Styles */
-    
+    .form-label {
+        display: block;
+    }
 }
 
 
