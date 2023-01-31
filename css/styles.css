@@ -52,11 +52,16 @@ html {
 
 
 /* 4. Body Styles */
-
+#contactHeader {
+   object-fit: fill;
+}
 
 /* 5. Footer Styles */
 .form-label {
     display: none;
+}
+.footer-bottom-bg {
+    background-color: black;
 }
 
 
@@ -144,7 +149,7 @@ html {
 
     /* 2. Navigation Styles */
     .navbar-brand {
-        margin: 0 5% 0 15%;
+        margin: 0 15% 0 0%;
     }
     .nav-link {
         font-size: 1.15vw;
