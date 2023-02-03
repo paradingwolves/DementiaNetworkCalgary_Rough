@@ -1,0 +1,74 @@
+<div class="loc_popup">
+    <!-- This could probably be something with JS where the class is assigned based on the type,
+        which assigns a colour? -->
+    <div class="loc_type"><p>Home Care</p></div>
+    <div class="loc_imagecontainer">
+        <img src="PenderMifflinLocation.png" alt="placeholder image" />
+    </div>
+    <div class="loc_details">
+        <p class="loc_name">NAME HERE</p>
+        <p class="loc_address">1234 Butthole St.<br /> Holebury, Buturbia</p>
+        <p class="loc_contact">519-555-5555</p>
+    </div>
+</div>
+
+<style>
+
+.loc_popup {
+    width: 250px;
+    height: 300px;
+    border-radius: 20px 0px 0px 0px;
+    background: #b4b4b4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loc_type {
+    width: 65px;
+    height: 65px;
+    background: #cecece;
+    border-radius: inherit;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.loc_type p {
+    width: inherit;
+    height: inherit;
+    line-height: 15px;
+    /* Not super happy with the font but we can fiddle with that later */
+    font-weight: 400;
+    font-size: large;
+    color: #535353;
+}
+
+.loc_imagecontainer {
+    width: inherit;
+    height: 50%;
+    display: inline;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.loc_imagecontainer img {
+    width: inherit;
+    border-radius: inherit;
+    height: 50%;
+    display: inline;
+    position: relative;
+}
+
+.loc_details {
+    padding: 0 5%;
+}
+
+.loc_name {
+    font-weight: 200;
+    font-size: large;
+}
+
+.loc_address {
+    font-size: medium;
+}
+
+</style>
