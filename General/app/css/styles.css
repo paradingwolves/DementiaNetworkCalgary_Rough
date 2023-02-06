@@ -1,0 +1,230 @@
+/* Typography Guide */
+
+/* Brand Guide */
+:root {
+    --dnc-logo: #27ac84;
+    --dnc-primary: #27AC84;
+    --dnc-secondary1: #8CECBA;
+    --dnc-secondary2: #D9FB5B;
+    --dnc-secondary3: #A7D533;
+    --dnc-secondary4: #2F534A;
+    --dnc-brand-font: proxima-nova, sans-serif;
+}
+
+
+/*
+0. CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+
+/*
+1. Header Styles
+2. Navigation Styles
+3. Heading Styles
+4. Body Styles
+5. Footer Styles
+6. Media Queries 
+*/
+
+
+
+/* 1. Header Styles */
+
+.navbar {
+    background: var(--dnc-primary);
+}
+.navbar > .container-fluid {
+    justify-content: center;
+}
+
+.navbar-collapse {
+    max-width: fit-content;
+}
+
+
+.navbar-brand {
+    margin: 0;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 50px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.navbar > .nav-item:hover {
+    transition: all 0.5s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    display: block;
+    color:#fff;
+    background: #5D6C6F;
+    width: 100%;
+}
+
+.dropdown-menu::before {
+    content: "";
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 10px solid #5D6C6F;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.dropdown-item {
+    color: #FFF;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    font-variant: small-caps;
+}
+
+
+.navbar .nav-item .dropdown-menu{ display: none; }
+.navbar .nav-item:hover .nav-link{   }
+.navbar .nav-item:hover .dropdown-menu{ display: block; }
+.navbar .nav-item .dropdown-menu{ margin-top:0; }
+
+/* 2. Navigation Styles */
+
+.navbar-brand {
+    margin: 0 0 0 -33%;
+    font-weight: bold;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
+}
+.nav-link {
+    text-align: center;
+}
+.dropdown-item {
+    text-align: center;
+}
+
+
+#DLHButton, #missingPersonButton {
+    display: none;
+}
+/* 3. Heading Styles */
+
+
+/* 4. Body Styles */
+
+
+/* 5. Footer Styles */
+
+
+
+
+
+/* 6. Media Queries */
+
+
+@media only screen and (min-width: 661px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    .navbar-brand {
+        margin: 0;
+    }
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+    
+}
+
+
+@media only screen and (min-width: 992px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+
+    .dropdown-item:hover, .dropdown-item:focus {
+        background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
+    }
+    .navbar-brand {
+        margin: 0;
+    }
+    #DLHButton, #missingPersonButton {
+        display: block;
+    }
+    .nav-link {
+        font-size: 1.25vw;
+        text-align: unset;
+    }
+
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+}
+@media only screen and (min-width: 1200px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    .navbar-brand {
+        margin: 0;
+    }
+    .nav-link {
+        font-size: 1.15vw;
+        text-align: unset;
+    }
+   
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+}
