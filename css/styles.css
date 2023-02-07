@@ -1,5 +1,16 @@
 /* Typography Guide */
 
+/* Brand Guide */
+:root {
+    --dnc-logo: #27ac84;
+    --dnc-primary: #27AC84;
+    --dnc-secondary1: #8CECBA;
+    --dnc-secondary2: #D9FB5B;
+    --dnc-secondary3: #A7D533;
+    --dnc-secondary4: #2F534A;
+    --dnc-brand-font: proxima-nova, sans-serif;
+}
+
 /* Colour Guide */
 
 
@@ -23,19 +34,29 @@
 html {
     overflow-x: none;
 }
-
+a {
+    text-decoration: none;
+}
 
 /* 1. Header Styles */
+.bg-DNC-dark {
+    background-color: var(--dnc-primary);
+}
 
 
 /* 2. Navigation Styles */
 
 .navbar-brand {
-    margin: 0 0% 0 -33%;
+    margin: 0 0% 0 0%;
     font-weight: bold;
 }
+.navbar-brand > img {
+    width: 120px;
+    margin: 0 25% 0 -5%;
+}
+
 .dropdown-item:hover, .dropdown-item:focus {
-    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
+    background-color: var(--dnc-primary);
 }
 .nav-link {
     text-align: center;
@@ -44,10 +65,25 @@ html {
     text-align: center;
 }
 
-
-#DLHButton, #missingPersonButton {
+#DLH_Button {
+    background-color: var(--dnc-secondary4);
+}
+#MP_Button {
+    background-color: var(--dnc-secondary2);
+}
+.navbar-brand > img {
+    width: 120px;
+}
+#DLH_Button, #MP_Button {
     display: none;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+
 /* 3. Heading Styles */
 
 
@@ -114,18 +150,20 @@ html {
     /* 2. Navigation Styles */
 
     .dropdown-item:hover, .dropdown-item:focus {
-        background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
+        background-color: var(--dnc-primary);
     }
     .navbar-brand {
         margin: 0 5% 0 0%;
     }
-    #DLHButton, #missingPersonButton {
+    #DLH_Button, #MP_Button {
         display: block;
     }
     .nav-link {
         font-size: 1.25vw;
         text-align: unset;
     }
+    
+    
 
     /* 3. Heading Styles */
 
@@ -149,7 +187,11 @@ html {
 
     /* 2. Navigation Styles */
     .navbar-brand {
-        margin: 0 15% 0 0%;
+        width: 120px;
+        margin: 0 20% 0 0%;
+    }
+    .navbar-brand > img {
+        margin-left: 125%
     }
     .nav-link {
         font-size: 1.15vw;
