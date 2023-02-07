@@ -47,12 +47,12 @@ a {
 /* 2. Navigation Styles */
 
 .navbar-brand {
-    margin: 0 0% 0 0%;
+    margin: 0 50% 0 0%;
     font-weight: bold;
 }
 .navbar-brand > img {
     width: 120px;
-    margin: 0 25% 0 -5%;
+    margin: 0 0% 0 -0%;
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
@@ -121,6 +121,9 @@ a {
     /* 2. Navigation Styles */
     .navbar-brand {
         margin: 0 55% 0 0%;
+    }
+    .navbar-brand > img {
+        margin: 0 0% 0 0%;
     }
     /* 3. Heading Styles */
 
