@@ -4,7 +4,7 @@
 
 
 <div class="container"> 
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md-2"></div>
         <div class="col-sm-10 col-md-3 mt-4">
             <h1 class="">
@@ -32,21 +32,12 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 mt-5">
-            <h5 class="text-dark mx-3">Got Any Questions?</h5>
-        </div>
-        <div class="col-md-2"></div>
-    </div>   
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 mt-5">
-            <p class="text-dark mx-3">Any questions, feedback, or looking to contribute? We would love to hear from you! </p>
-        </div>
-        <div class="col-md-2"></div>
-    </div>     
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 mt-5">
-            <p class="text-dark mx-3">To get in touch, please fill out the form below. </p>
+            <h5 class="text-dark my-4 mx-3">Got Any Questions?</h5>
+            <p class="text-dark my-4 mx-3">
+                Any questions, feedback, or looking to contribute?
+                We would love to hear from you!
+            </p>
+            <p class="text-dark my-4 mx-3">To get in touch, please fill out the form below. </p>
         </div>
         <div class="col-md-2"></div>
     </div>

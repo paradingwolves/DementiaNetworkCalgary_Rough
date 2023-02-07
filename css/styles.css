@@ -68,7 +68,7 @@ a {
 #DLH_Button {
     background-color: var(--dnc-secondary4);
 }
-#MP_Button {
+#MP_Button, .btn-dnc-yellow {
     background-color: var(--dnc-secondary2);
 }
 .navbar-brand > img {
