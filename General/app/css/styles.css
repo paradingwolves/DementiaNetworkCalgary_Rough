@@ -112,6 +112,12 @@
     font-weight: bold;
 }
 
+/* 2.01 Left Nav Styles */
+
+.lmenu {
+    list-style: none;
+}
+
 /* 3. General Body Layout */
 main {
     padding: 5% 10%;
