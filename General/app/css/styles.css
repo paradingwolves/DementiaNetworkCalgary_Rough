@@ -1,0 +1,352 @@
+/* Typography Guide */
+
+/* Brand Guide */
+:root {
+    --dnc-logo: #27ac84;
+    --dnc-primary: #27AC84;
+    --dnc-secondary1: #8CECBA;
+    --dnc-secondary2: #D9FB5B;
+    --dnc-secondary3: #A7D533;
+    --dnc-secondary4: #2F534A;
+    --dnc-brand-font: proxima-nova, sans-serif;
+}
+
+/*
+1. Header Styles
+2. Navigation Styles
+3. Heading Styles
+4. Body Styles
+5. Footer Styles
+6. Media Queries 
+*/
+
+/* 1. Header Styles */
+
+.navbar {
+    background: var(--dnc-primary);
+    height: 100%;
+}
+
+/* This, for some reason, centers the header. */
+.navbar > .container-fluid {
+    justify-content: center;
+}
+
+.navbar-collapse {
+    max-width: fit-content;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+/* 2. Navigation Styles */
+
+.navbar-brand {
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar-brand > img {
+    width: 120px;
+}
+
+.navbar-nav {
+    padding: 0 0;
+}
+
+.nav-link {
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 0;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.dropdown-menu {
+    position: relative;
+    display: block;
+    color:#fff;
+    background: #fff;
+    width: 200%;
+    left: -50%; 
+}
+
+.dropdown-menu::before {
+    content: "";
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.dropdown-item {
+    color: var(--dnc-secondary4);
+    background: #FFF;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 2rem;
+    font-size: 1rem;
+    font-variant: small-caps;
+}
+
+.dropdown-item:hover {
+    color: #fff;
+    background: var(--dnc-secondary1);
+    border: 1px solid darkgreen;
+}
+/* This makes it hover */
+.navbar .nav-item .dropdown-menu{ display: none; }
+.navbar .nav-item:hover .nav-link{  }
+.navbar .nav-item:hover .dropdown-menu{ display: block; }
+.navbar .nav-item .dropdown-menu{ margin-top:0; }
+
+.navbar-brand {
+    margin: 0 0 0 -33%;
+    font-weight: bold;
+}
+
+/* 2.01 Left Nav Styles */
+
+.lmenu {
+    list-style: none;
+    margin-left: -45px;
+}
+
+.lmenu-item {
+    border: 1px dotted var(--dnc-secondary4);
+    border-radius: 25px;
+    margin: 5px 215px 5px 0px;
+    padding: 5px 5px 5px 0px;
+    background-color: var(--dnc-primary);
+    text-align: center;
+}
+
+.lmenu-item > a:link {
+    text-decoration: none;
+    color: ivory;
+}
+
+.lmenu-item > a:hover {
+    text-decoration: underline var(--dnc-secondary4);
+    color: var(--dnc-secondary3);
+    font-size: 20px;
+    transition: 1s;
+}
+
+/* 3. General Body Layout */
+main {
+    padding: 5% 10%;
+    margin: 0 auto;
+}
+
+/* 3. Heading Styles */
+
+
+/* 4. Body Styles */
+
+/* 4.?? Event Card - Main Page */
+
+.eventswidget {
+    align-items: center;
+    margin: 0 auto;
+}
+
+.event_card {
+    margin-top: 12px;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px 0px 0px 0px;
+    background: #EEECDC;
+    font-family: Proxima Novo, Arial, Helvetica, sans-serif;
+    color: var(--dnc-secondary4);
+}
+
+.event_date {
+    width: 65px;
+    height: 65px;
+    background-color: #EEECDC;
+    border-radius: inherit;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    color: var(--dnc-secondary4);
+}
+
+.event_month {
+    padding-top: 6px;
+    font-size: 13px;
+    line-height: 14px;
+}
+
+.event_day {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.event_imagecontainer {
+    width: inherit;
+    height: 50%;
+    display: inline;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.event_imagecontainer img {
+    width: inherit;
+    border-radius: inherit;
+    height: 50%;
+    display: inline;
+    position: relative;
+}
+
+.event_details {
+    padding: 0 5%;
+}
+
+.event_name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.event_time {
+    font-size: 12px;
+    padding-left: 18%;
+}
+.event_description {
+    font-size: 14px;
+    text-align: justify;
+}
+.event_more {
+    text-align: right;
+}
+
+/* 4.? Form Styles */
+form > div > button {
+    background: var(--dnc-primary);
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #78c2ad;
+    --bs-btn-border-color: #78c2ad;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #66a593;
+    --bs-btn-hover-border-color: #609b8a;
+    --bs-btn-focus-shadow-rgb: 140, 203, 185;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #609b8a;
+    --bs-btn-active-border-color: #5a9282;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #78c2ad;
+    --bs-btn-disabled-border-color: #78c2ad;
+}
+
+/* 5. Footer Styles */
+footer {
+    background: var(--dnc-primary);
+}
+
+
+
+
+/* 6. Media Queries */
+
+
+@media only screen and (min-width: 661px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    .navbar-brand {
+        margin: 0;
+    }
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+    
+}
+
+
+@media only screen and (min-width: 992px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+
+
+    .navbar-brand {
+        margin: 0;
+    }
+    #DLHButton, #missingPersonButton {
+        display: block;
+    }
+    .nav-link {
+        font-size: 1.25vw;
+        text-align: unset;
+    }
+
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+}
+@media only screen and (min-width: 1200px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    .navbar-brand {
+        margin: 0;
+    }
+    .nav-link {
+        font-size: 1.15vw;
+        text-align: unset;
+    }
+   
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+}
