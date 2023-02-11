@@ -99,6 +99,16 @@ a {
 .footer-bottom-bg {
     background-color: black;
 }
+/* Disclaimer Tooltip */
+.div-tooltip {
+    position: relative;
+    background: transparent;
+    color: white;
+    z-index: 99999;
+    margin-top: 10%
+}
+
+
 
 
 
