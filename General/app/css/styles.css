@@ -114,13 +114,52 @@
 
 /* 2.01 Left Nav Styles */
 
+.left_nav {
+    border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+    border-radius: 0 15px 0 0;
+}
+
+.left_nav h2 {
+    border-radius: 0 10px 0 0;
+    background-color: var(--dnc-secondary4);
+    color: #e5ece3;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 15px 20px;
+}
+
 .lmenu {
     list-style: none;
+    padding: 5%;
+}
+
+.lmenu-item {
+    position: relative;
+    left: 0;
+    padding-left: 7.5%;
+    margin: 0;
+    background: none;
+}
+
+.lmenu-item > a {
+    display: block;
+    width: inherit;
+    text-decoration: none;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.lmenu-item:hover, .lmenu-item > a:hover {
+    background: #d2f5e8;
+    font-weight: 500;
 }
 
 /* 3. General Body Layout */
 main {
-    padding: 5% 10%;
+    padding: 5% 10% 0;
     margin: 0 auto;
 }
 
@@ -140,7 +179,7 @@ main {
     margin-top: 12px;
     width: 250px;
     height: 300px;
-    border-radius: 20px 0px 0px 0px;
+    border-radius: 20px 0 0 0;
     background: #EEECDC;
     font-family: Proxima Novo, Arial, Helvetica, sans-serif;
     color: var(--dnc-secondary4);
