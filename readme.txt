@@ -31,3 +31,11 @@ Time: 4:00pm-8:00pm
 - further production on resourcesDementia.php
 - add Disclaimer to footer in form of a JavaScript tooltip using jQuery
             --> tooltip.js
+
+
+Date Modified: 2023-02-12 
+-------------------------
+Time: 1:00pm-2:00pm
+-------------------------
+- added the mini directory to header.php 
+- added more content to resourcesDementia.php

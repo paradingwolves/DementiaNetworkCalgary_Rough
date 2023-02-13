@@ -11,6 +11,7 @@
     --dnc-brand-font: proxima-nova, sans-serif;
 }
 
+
 /* Colour Guide */
 
 
@@ -25,6 +26,13 @@
 */
 
 
+
+.left-nav {
+    padding: 0px;
+    /* border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+    border-radius: 0 15px 0 0; */
+    background-color: var(--dnc-primary);
+}
 
 
 
@@ -42,9 +50,15 @@ a {
 .bg-DNC-dark {
     background-color: var(--dnc-primary);
 }
-
+.bg-DNC-2 {
+    background-color: var(--dnc-secondary1);
+}
 
 /* 2. Navigation Styles */
+
+.tests {
+    margin-left: 0px;
+}
 
 .navbar-brand {
     margin: 0 50% 0 0%;
@@ -60,7 +74,30 @@ a {
 }
 .nav-link {
     text-align: center;
+    color: white;
 }
+.content-nav-header{
+    color: white;
+    text-align: center;
+    font-size: 5vw;
+}
+.content-nav-item {
+    font-size: 4vw;
+    list-style-type: none;
+    text-align: center;
+}
+.content-nav-item>a {
+    color: var(--dnc-secondary4);
+    display:block; 
+    width: inherit;
+    font-weight: 500;
+}
+.content-nav-item:hover, .content-nav-item:hover>a {
+    background-color: white;
+    color: var(--dnc-primary);
+    font-size: 1.75vw;
+}
+
 .dropdown-item {
     text-align: center;
 }
@@ -85,7 +122,16 @@ a {
 
 
 /* 3. Heading Styles */
-
+.left-nav h4 {
+    background-color: var(--dnc-secondary4);
+    color: #e5ece3;
+}
+.left-nav {
+    background-color: #f3f3f3;
+}
+.left-nav>a {
+    color: var(--dnc-secondary4);
+}
 
 /* 4. Body Styles */
 #contactHeader {
@@ -175,7 +221,37 @@ a {
         font-size: 1.25vw;
         text-align: unset;
     }
-    
+    .left-nav h4 {
+        border-radius: 0 10px 0 0;
+        background-color: var(--dnc-secondary4);
+        color: #e5ece3;
+        font-size: 1.5vw;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 15px 20px;
+    }
+    .left-nav {
+        padding: 0px;
+        border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+        border-radius: 0 15px 0 0;
+        
+    }
+    .content-nav-header {
+        font-size: 2vw;
+    }
+    .content-nav-item {
+        font-size: 1.25vw;
+    }
+    .content-nav-item>a {
+        line-height: 5vw;
+        vertical-align: middle;
+        margin-top: 5%
+    }
+    .content-nav:hover{
+        font-size: 1.75vw;
+    }
     
 
     /* 3. Heading Styles */
@@ -199,6 +275,7 @@ a {
 
 
     /* 2. Navigation Styles */
+    
     .navbar-brand {
         width: 120px;
         margin: 0 20% 0 0%;
@@ -210,7 +287,22 @@ a {
         font-size: 1.15vw;
         text-align: unset;
     }
-   
+    .left-nav h4 {
+        background-color: var(--dnc-secondary4);
+        font-size: 1.25vw;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 15px 20px;
+    }
+    .left-nav {
+        padding: 0px;
+        border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+        border-radius: 0 15px 0 0;
+        
+    }
+    
     /* 3. Heading Styles */
 
 

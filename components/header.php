@@ -7,26 +7,32 @@
       case 'home.php':
         $meta_keywords = "Dementia, Network, Alzheimers, Calgary";
         $page_title = "Dementia Network Calgary";
+        $page_header = "Home";
       break;
       case 'about.php':
         $meta_keywords = "about, company, history";
         $page_title = "About Us";
+        $page_header = "About Us";
       break;
       case 'contact.php':
         $meta_keywords = "contact, email, phone";
         $page_title = "Contact Us";
+        $page_header = "Contact Us";
       break;
       case 'resourcesDementia.php':
         $meta_keywords = "Resources, Information, Questions";
         $page_title = "Resources";
+        $page_header = "Resources";
       break;
       case 'needHelp.php':
         $meta_keywords = "Help, Dementia, Support";
         $page_title = "Need Help?";
+        $page_header = "Need Help?";
       break;
       default:
         $meta_keywords = "Dementia, Network, Alzheimers";
         $page_title = "Dementia Network Calgary";
+        $page_header = "Dementia Network Calgary";
         break;
     }
   ?>
@@ -44,7 +50,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a id="DLHButton" href="/dementia-lives-here/">
+      <a id="DLHButton" href="/dementia-lives-here/" target="_blank">
         <span>
           <button id="DLH_Button" class="btn" type="button" >
             <strong>DEMENTIA<br>
@@ -93,7 +99,7 @@
           <li class="nav-item mx-3">
             <a class="nav-link text-white" href="contact.php">Contact Us</a>
           </li>
-          <a id="missingPersonButton" href="https://missingseniors.ca">
+          <a id="missingPersonButton" href="https://missingseniors.ca" target="_blank">
             <span>
               <button id="MP_Button" class="btn text-dark" type="button">
                 <strong>MISSING<br>PERSON?</strong>
@@ -108,6 +114,33 @@
     </div>
   </nav>
   <body>
+    <div class="container">
+    <div class="row mt-2">
+        <div class="col-md-2"></div>
+       <!--  <div class="col-sm-10 col-md-3 mt-2">
+            <h1 class="">
+
+                <span><?php echo $page_header; ?></span>
+
+            </h1>
+        </div> -->
+        <div class="col-md-3"></div>
+        <div class="col-sm-10 col-md-4  my-2">
+            <nav class="" aria-label="You are here:"><span class="" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span class="" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="home.php" rel="home">
+                        <span itemprop="name">Home
+
+                        </span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </span>
+                <span class="sep sep-1"> » </span>
+                <span class="trail-end"><?php echo $page_title; ?></span></span>
+            </nav>
+        </div>
+    </div>
+    </div>
 
 
 

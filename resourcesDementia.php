@@ -2,54 +2,27 @@
       require_once("components/header.php");
 ?>
 
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-md-2"></div>
-        <div class="col-sm-10 col-md-3 mt-4">
-            <h1 class="">
-
-                <span>Resources</span>
-
-            </h1>
-        </div>
-        <div class="col-md-3"></div>
-        <div class="col-sm-10 col-md-4  my-5">
-            <nav class="" aria-label="You are here:"><span class="" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                <span class="" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                    <a itemprop="item" href="home.php" rel="home">
-                        <span itemprop="name">Home
-
-                        </span>
-                    </a>
-                    <meta itemprop="position" content="1">
-                </span>
-                <span class="sep sep-1"> » </span>
-                <span class="trail-end">Resources</span></span>
-            </nav>
-        </div>
-    </div>
+<div class="container tests">
     <div class="row mt-4">
-        <div class="col-lg-4 ">
-            <h4 class="">On This Page</h4><br>
-            <ul>
-                <a href="resourcesDementia.php#News">
-                    <li class="nav-link mt-3">News</li>
-                </a>
-                <a href="resourcesDementia.php#WhatIsDementia">
-                    <li class="nav-link mt-2">What is Dementia?</li>
-                </a>
-                <a href="resourcesDementia.php#DementiaResources">
-                    <li class="nav-link mt-2">Dementia Resources</li>
-                </a>
-                <a href="resourcesDementia.php#Map">
-                    <li class="nav-link mt-2">Map of Services in Calgary</li>
-                </a>
-                <a href="resourcesDementia.php#TranslatedDocs">
-                    <li class="nav-link mt-2">Translated Documents</li>
-                </a>
-                <a href="resourcesDementia.php#PrintAtHome">
-                    <li class="nav-link mt-2">Print at Home Tools</li>
-                </a>
+        <div class="col-md-4 left-nav">
+            <h4 class="content-nav-header">On This Page</h4><br>
+            <ul style="padding:0;">
+                <li class="content-nav-item">
+                    <a href="resourcesDementia.php#News">News</a>
+                </li>
+                <li class="content-nav-item">
+                    <a href="resourcesDementia.php#WhatIsDementia">What is Dementia?</a>
+                </li>
+                <li class="content-nav-item">
+                    <a href="resourcesDementia.php#Map">Map of Services in Calgary</a>
+                </li>
+                <li class="content-nav-item">
+                    <a href="resourcesDementia.php#TranslatedDocs">Translated Documents</a>
+                </li>
+                <li class="content-nav-item">
+                    <a href="resourcesDementia.php#PrintAtHome">Print at Home Tools</a>
+                </li>
+                
             </ul>
         </div>
         <div class="col-lg-1"></div>
@@ -81,6 +54,11 @@
                 <p>Check out the links below. If you can't find the information you're looking for, send us a message <a href="contact.php">here</a>.</p>
                 <div class="container-lg">
                     <div class="row">
+                    <div class="col-md-6 my-3">
+                            <h5>Tools Via Action Awareness Team</h5><br>
+                            <a class="mt-2" href="https://dementianetworkcalgary.ca/wp-content/uploads/2022/06/CommunicatingandEngaginghandout.pdf" target="_blank" >Communicating and Engaging With Someone Who Has Dementia</a><br>
+                    <a class="mt-2" href="https://dementianetworkcalgary.ca/wp-content/uploads/2022/06/Letmereintroducemyselftoolkit.pdf" target="_blank">Let Me Re-Introduce Myself</a><br>
+                        </div>
                         <div class="col-md-6 my-3">
                             <h5>Facts About Dementia</h5><br>
                             <a href="https://www.alzheimercalgary.ca/learn/what-you-need-to-know" class="mt-2"  target="_blank">What You Need To Know</a><br>
@@ -102,9 +80,47 @@
                             <a href="https://www.alzheimercalgary.ca/" class="mt-2"  target="_blank">Alzheimer Calgary</a><br>
                             <a href="https://www.alzint.org/" class="mt-2"  target="_blank">Alzheimer's Disease International</a><br>
                         </div>
+                        <div class="col-md-6 my-3">
+                            <h5>Living With Dementia</h5><br>
+                            <a href="https://www.alzheimercalgary.ca/find-support/just-diagnosed" class="mt-2"  target="_blank">Recently Diagnosed?</a><br>
+                            <a href="https://www.alzheimercalgary.ca/find-support/things-to-consider-if-you-have-dementia" class="mt-2"  target="_blank">Things to Consider</a><br>
+                            <a href="https://www.alzheimercalgary.ca/find-support/caring-for-someone-with-dementia" class="mt-2"  target="_blank">Caring for Someone With Dementia</a><br>
+                            <a href="https://alzheimer.ca/en/Living-with-dementia" class="mt-2"  target="_blank">Broken Link</a><br>
+                            <a href="https://www.cmhc-schl.gc.ca/en" class="mt-2"  target="_blank">Potentially Unrelated?</a><br>
+                            <a href="https://dementianetworkcalgary.ca/s/Human-Rights-for-People-Living-with-Dementia-Rhetoric-to-Reality.pdf" class="mt-2"  target="_blank">Broken Link</a><br>
+                        </div>
+                        <div class="col-md-6 my-3">
+                            <h5>Tips and Toolkits</h5><br>
+                            <a href="https://alzheimer.ca/en/Living-with-dementia/Ways-to-communicate/Tips-for-communicating-person-with-dementia" class="mt-2"  target="_blank">Broken Link</a><br>
+                            <a href="https://alzheimer.ca/en/Living-with-dementia/Staying-connected/Visiting-someone-with-dementia" class="mt-2"  target="_blank">Broken Link</a><br>
+                            <a href="https://alzheimer.ca/en/Living-with-dementia/Staying-connected/Holidays-and-special-occasions" class="mt-2"  target="_blank">Broken Link</a><br>
+                            <a href="https://alzheimer.ca/en/Living-with-dementia/Staying-connected/Helping-children" class="mt-2"  target="_blank">Broken Link</a><br>
+                            <a href="https://alzheimer.ca/en/Living-with-dementia/Staying-connected/Helping-teens" class="mt-2"  target="_blank">Broken Link</a><br>
+                        </div>
+                        <div class="col-md-6 my-3">
+                            <h5>General Dementia Resources</h5><br>
+                            <a href="https://www.alzheimercalgary.ca/" class="mt-2"  target="_blank">Alzheimer Calgary</a><br>
+                            <a href="https://www.alzint.org/" class="mt-2"  target="_blank">Alzheimer's Disease International</a><br>
+                        </div>
+                        <div class="col-md-6 my-3">
+                            <h5>Recognizing Dementia</h5><br>
+                            <a href="https://www.alzheimercalgary.ca/learn/warning-signs" class="mt-2"  target="_blank">Warning Signs</a><br>
+                        </div>
+                        <div class="col-md-6 my-3">
+                            <h5>Latest Research</h5><br>
+                            <a href="https://www.alzheimercalgary.ca/learn/cause-and-cure" class="mt-2"  target="_blank">Alzheimer Calgary</a><br>
+                            <a href="https://www.alzint.org/what-we-do/research/" class="mt-2"  target="_blank">Alzheimer's Disease International</a><br>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8 my-3">
+                                <h5>Dementia Friends Canada</h5><br>
+                            <p class="text-dark">A national awareness and public engagement initiative with an aim is to create a more aware and informed Canadian population to dispel myths and reduce stigma about dementia. Find more information <a href="https://www.dementiafriends.ca/">here</a>.</p>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <!-- <a class="my-3" href="https://dementianetworkcalgary.ca/wp-content/uploads/2022/06/CommunicatingandEngaginghandout.pdf" target="_blank" >Communicating and Engaging With Someone Who Has Dementia</a><br>
-                    <a class="my-3" href="https://dementianetworkcalgary.ca/wp-content/uploads/2022/06/Letmereintroducemyselftoolkit.pdf" target="_blank">Let Me Re-Introduce Myself</a><br> -->   
+                    <!--  -->   
                 </section>
         </div>
     </div>
