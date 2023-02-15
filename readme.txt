@@ -39,3 +39,16 @@ Time: 1:00pm-2:00pm
 -------------------------
 - added the mini directory to header.php 
 - added more content to resourcesDementia.php
+
+Date Modified: 2023-02-13 
+-------------------------
+Time: 1:00pm-2:00pm
+-------------------------
+- corrected the overflow created by the left nav on resourcesDementia.php in the body ---> body{overflow-x:none;}
+
+
+Date Modified: 2023-02-14 
+-------------------------
+Time: 10:00pm-11:00pm
+-------------------------
+- made further corrections to header.php
