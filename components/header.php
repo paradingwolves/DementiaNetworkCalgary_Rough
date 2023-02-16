@@ -50,8 +50,6 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
-      <div class="collapse navbar-collapse" id="navbarColor01">
       <a id="DLHButton" href="/dementia-lives-here/" target="_blank">
         <span>
           <button id="DLH_Button" class="btn" type="button" >
@@ -61,6 +59,7 @@
           </button></span>
         </span>
       </a>
+      <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item dropdown">
             <a class="nav-link text-white  mx-3"  href="about.php" role="button" aria-haspopup="true" aria-expanded="false">About Us ⤸</a>
@@ -79,7 +78,6 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Impact</a>
             </div>
-          </li>
           <li class="nav-item mx-3">
             <a class="nav-link text-white" href="needHelp.php">Need Help?</a>
           </li>
@@ -87,7 +85,7 @@
             <a class="nav-link text-white" href="#">Events</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link text-white"  href="resourcesDementia.php" role="button" aria-haspopup="true" >Resources ⤸</a>
+            <a class="nav-link text-white"  href="resourcesDementia.php" role="button" aria-haspopup="true" aria-expanded="false">Resources ⤸</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="resourcesDementia.php#News">News</a>
               <a class="dropdown-item" href="resourcesDementia.php#WhatIsDementia">What is Dementia?</a>
@@ -101,16 +99,16 @@
           <li class="nav-item mx-3">
             <a class="nav-link text-white" href="contact.php">Contact Us</a>
           </li>
-          
-          
-        </ul>
-        <a id="missingPersonButton" href="https://missingseniors.ca" target="_blank">
+          <a id="missingPersonButton" href="https://missingseniors.ca" target="_blank">
             <span>
               <button id="MP_Button" class="btn text-dark" type="button">
                 <strong>MISSING<br>PERSON?</strong>
               </button>
             </span>
           </a>
+          
+        </ul>
+        
       </div>
       
     </div>
