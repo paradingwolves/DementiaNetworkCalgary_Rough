@@ -39,3 +39,12 @@ Time: 1:00pm-2:00pm
 -------------------------
 - added the mini directory to header.php 
 - added more content to resourcesDementia.php
+
+
+Date Modified: 2023-02-15 
+-------------------------
+Time: 10:00pm-12:00am
+-------------------------
+- corrected errors in header
+- corrected breakpoints in left navigation
+- more work on resourcesDementia.php page

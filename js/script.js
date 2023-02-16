@@ -9,14 +9,6 @@ $(document).ready(function() {
     });
 
     // back to top button
-    $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
-        $('#back-to-top-btn').fadeIn();
-      } else {
-        $('#back-to-top-btn').fadeOut();
-      }
-    });
-  
     // Scroll to the top of the page when the button is clicked
     $('#back-to-top-btn').click(function(){
       $('html, body').animate({scrollTop : 0},0);

@@ -91,8 +91,8 @@
               <a class="dropdown-item" href="resourcesDementia.php#WhatIsDementia">What is Dementia?</a>
               <a class="dropdown-item" href="resourcesDementia.php#DementiaResources">Dementia Resources</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="resourcesDementia.php#Map">Map of Services in Calgary</a>
-              <a class="dropdown-item" href="resourcesDementia.php#TranslatedDocs">Translated Documents</a>
+              <a class="dropdown-item" href="resourcesDementia.php#mapOfServices">Map of Services in Calgary</a>
+              <a class="dropdown-item" href="resourcesDementia.php#translatedDocuments">Translated Documents</a>
               <a class="dropdown-item" href="resourcesDementia.php#PrintAtHome">Print at Home Tools</a>
             </div>
           </li>

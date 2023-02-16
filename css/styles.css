@@ -99,7 +99,7 @@ a {
 .content-nav-item:hover, .content-nav-item:hover>a {
     background-color: white;
     color: var(--dnc-primary);
-    font-size: 1.75vw;
+    font-size: 4.75vw;
 }
 
 .dropdown-item {
@@ -141,6 +141,32 @@ a {
 #contactHeader {
    object-fit: fill;
 }
+
+
+/* Resources > #Map of Services */
+.mapOfServices-frame {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.mapOfServices-info {
+    border-right: none;
+    border-radius: 0 6px 6px 0;
+}
+.mapOfServices-frame h4 {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.mapOfServices-frame p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.mapOfServices-frame iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 
 /* 5. Footer Styles */
 .form-label {
@@ -189,7 +215,7 @@ a {
 
 
     /* 4. Body Styles */
-
+    
 
     /* 5. Footer Styles */
     .form-label {
@@ -228,9 +254,6 @@ a {
 /*         border-radius: 0 15px 0 0; */
         
     }
-    .content-nav-item {
-        font-size: 4vw;
-    }
     .content-nav-item:hover, .content-nav-item:hover>a {
         font-size: 4.25vw;
     }
@@ -247,7 +270,11 @@ a {
 }
 
 
-
+@media only screen and (min-width: 768px){
+    .mapOfServices-info {
+        border-right: 2px solid var(--dnc-secondary4);
+    }
+}
 @media only screen and (min-width: 992px) {
     /* 
     1. Header Styles
@@ -343,7 +370,7 @@ a {
 
     /* 4. Body Styles */
 
-
+    
     /* 5. Footer Styles */
 }
 @media only screen and (min-width: 1200px) {
