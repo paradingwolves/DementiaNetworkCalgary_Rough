@@ -39,7 +39,7 @@
 
 
 
-html, body {
+html {
     overflow-x: none;
 }
 a {
@@ -60,6 +60,7 @@ a {
     margin-left: 0px;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -68,6 +69,8 @@ a {
     justify-content: left;
 } 
 
+=======
+>>>>>>> parent of ef671fc (updated to match main branch)
 .navbar-brand {
     margin: 0 50% 0 0%;
 }
@@ -82,18 +85,12 @@ a {
 .nav-link {
     text-align: center;
     color: white;
-    line-height: 100px;
-    padding: 0;
-    
 }
-.nav-item {
-    vertical-align: middle;
-    height: 100px;
+.content-nav-header{
+    color: white;
+    text-align: center;
+    font-size: 5vw;
 }
-.navbar-collapse {
-    max-width: fit-content;
-}
-/* Resources Page */
 .content-nav-item {
     font-size: 4vw;
     list-style-type: none;
@@ -108,7 +105,7 @@ a {
 .content-nav-item:hover, .content-nav-item:hover>a {
     background-color: white;
     color: var(--dnc-primary);
-    font-size: 4.25vw;
+    font-size: 1.75vw;
 }
 
 .dropdown-item {
@@ -135,31 +132,20 @@ a {
 
 
 /* 3. Heading Styles */
-
-/* Resources Page */
-.content-nav-header{
-    color: white;
-    text-align: center;
-    font-size: 5vw;
-}
 .left-nav h4 {
     background-color: var(--dnc-secondary4);
     color: #e5ece3;
 }
-
-
-/* 4. Body Styles */
-#contactHeader {
-   object-fit: fill;
-}
-
-/* Resources Page */
-
 .left-nav {
     background-color: #f3f3f3;
 }
 .left-nav>a {
     color: var(--dnc-secondary4);
+}
+
+/* 4. Body Styles */
+#contactHeader {
+   object-fit: fill;
 }
 
 /* 5. Footer Styles */
@@ -204,20 +190,6 @@ a {
     }
     .navbar-brand > img {
         margin: 0 0% 0 0%;
-    }
-    /* Resources Page */
-    
-    .left-nav {
-        padding: 0px;
-       /*  border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4); */
-/*         border-radius: 0 15px 0 0; */
-        
-    }
-    .content-nav-item {
-        font-size: 4vw;
-    }
-    .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size: 4.25vw;
     }
     /* 3. Heading Styles */
 
@@ -295,6 +267,7 @@ a {
 
 
     /* 2. Navigation Styles */
+<<<<<<< HEAD
     .dropdown-menu {
         position: relative;
         display: none;
@@ -319,6 +292,8 @@ a {
          margin-top: 0; 
      }
     
+=======
+>>>>>>> parent of ef671fc (updated to match main branch)
 
     .dropdown-item:hover, .dropdown-item:focus {
         background-color: var(--dnc-primary);
@@ -333,17 +308,9 @@ a {
         font-size: 1.25vw;
         text-align: unset;
     }
-
-    /* Resources Page */
-    .content-nav-item {
-        font-size: 3.25vw;
-    }
-    .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size:2.25vw;
-    }
     .left-nav h4 {
-        background-color: var(--dnc-secondary4);
         border-radius: 0 10px 0 0;
+        background-color: var(--dnc-secondary4);
         color: #e5ece3;
         font-size: 1.5vw;
         letter-spacing: 1px;
@@ -352,20 +319,29 @@ a {
         margin: 0;
         padding: 15px 20px;
     }
+<<<<<<< HEAD
 
+=======
+    .left-nav {
+        padding: 0px;
+        border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+        border-radius: 0 15px 0 0;
+        
+    }
+>>>>>>> parent of ef671fc (updated to match main branch)
     .content-nav-header {
         font-size: 2vw;
     }
     .content-nav-item {
-        font-size: 2.25vw;
+        font-size: 1.25vw;
     }
     .content-nav-item>a {
         line-height: 5vw;
         vertical-align: middle;
         margin-top: 5%
     }
-    .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size:2.5vw;
+    .content-nav:hover{
+        font-size: 1.75vw;
     }
     
 
@@ -402,67 +378,20 @@ a {
         font-size: 1.15vw;
         text-align: unset;
     }
-    /* Resources Page */
     .left-nav h4 {
-        
-        font-size: 1.5vw;
-    }
-    .content-nav-item {
+        background-color: var(--dnc-secondary4);
         font-size: 1.25vw;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 15px 20px;
     }
-    .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size:1.5vw;
-    }
-    .left-nav h4 {
-        font-size: 1.5vw;
-    }
-    
-    /* 3. Heading Styles */
-
-
-    /* 4. Body Styles */
-
-
-    /* 5. Footer Styles */
-}
-
-@media only screen and (min-width: 1600px) {
-    /* 
-    1. Header Styles
-    2. Navigation Styles
-    3. Heading Styles
-    4. Body Styles
-    5. Footer Styles 
-    */
-
-    /* 1. Header Styles */
-
-
-    /* 2. Navigation Styles */
-    
-    .navbar-brand {
-        width: 120px;
-        margin: 0 20% 0 0%;
-    }
-    .navbar-brand > img {
-        margin-left: 125%
-    }
-    .nav-link {
-        font-size: 1.15vw;
-        text-align: unset;
-    }
-    /* Resources Page */
-    .left-nav h4 {
-        font-size: 1.5vw;
-    }
-    .content-nav-item {
-        font-size: 1vw;
-    }
-    .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size:1.25vw;
-    }
-    .left-nav h4 {
-        font-size: 1.5vw;
+    .left-nav {
+        padding: 0px;
+        border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+        border-radius: 0 15px 0 0;
+        
     }
     
     /* 3. Heading Styles */
