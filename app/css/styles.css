@@ -27,7 +27,7 @@
 
 
 html {
-    overflow-x: none;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -43,18 +43,18 @@ a {
 
 /* 2. Navigation Styles */
 .tests {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .navbar > .container-fluid {
     justify-content: left;
 }
 .navbar-brand {
-    margin: 0 50% 0 0%;
+    margin: 0 50% 0 0;
 }
 .navbar-brand > img {
     width: 120px;
-    margin: 0 0% 0 -0%;
+    margin: 0 0 0 -0;
 }
 
 .dropdown-item {
@@ -152,10 +152,10 @@ a {
 
     /* 2. Navigation Styles */
     .navbar-brand {
-        margin: 0 55% 0 0%;
+        margin: 0 55% 0 0;
     }
     .navbar-brand > img {
-        margin: 0 0% 0 0%;
+        margin: 0 0 0 0;
     }
     /* 3. Heading Styles */
 
@@ -184,14 +184,14 @@ a {
         left: -133%
     }
     .navbar-brand {
-        margin: 0 55% 0 0%;
+        margin: 0 55% 0 0;
     }
     .navbar-brand > img {
-        margin: 0 0% 0 0%;
+        margin: 0 0 0 0;
     }
     /* Left Nav */
     .left-nav {
-        padding: 0px;
+        padding: 0;
        /*  border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4); */
 /*         border-radius: 0 15px 0 0; */
         
@@ -312,7 +312,7 @@ a {
     /* 2. Navigation Styles */
     .navbar-brand {
         /* width: 100px; */
-        margin: 0 10% 0 0%;
+        margin: 0 10% 0 0;
     }
     .navbar-brand > img {
         margin-left: 50%
@@ -363,7 +363,7 @@ a {
 
     /* 2. Navigation Styles */
     .navbar-brand {
-        margin: 0 15% 0 0%;
+        margin: 0 15% 0 0;
     }
     .navbar-brand > img {
         margin-left: 100%
@@ -388,7 +388,7 @@ a {
 
     /* 2. Navigation Styles */
     .navbar-brand {
-        margin: 0 20% 0 0%;
+        margin: 0 20% 0 0;
     }
     .navbar-brand > img {
         margin-left: 300%
