@@ -62,7 +62,7 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link text-white dropdown-toggle mx-3" data-bs-toggle="dropdown" href="about.php" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+            <a class="nav-link text-white  mx-3"  href="about.php" role="button" aria-haspopup="true" aria-expanded="false">About Us ⤸</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">Who We are</a>
               <a class="dropdown-item" href="#">What We Do</a>
@@ -85,7 +85,7 @@
             <a class="nav-link text-white" href="#">Events</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="resourcesDementia.php" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
+            <a class="nav-link text-white"  href="resourcesDementia.php" role="button" aria-haspopup="true" aria-expanded="false">Resources ⤸</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="resourcesDementia.php#News">News</a>
               <a class="dropdown-item" href="resourcesDementia.php#WhatIsDementia">What is Dementia?</a>

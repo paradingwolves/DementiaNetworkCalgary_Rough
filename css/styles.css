@@ -60,17 +60,11 @@ a {
     margin-left: 0px;
 }
 
-<<<<<<< HEAD
-
-
-
 
 .navbar > .container-fluid {
     justify-content: left;
 } 
 
-=======
->>>>>>> parent of ef671fc (updated to match main branch)
 .navbar-brand {
     margin: 0 50% 0 0%;
 }
@@ -267,7 +261,7 @@ a {
 
 
     /* 2. Navigation Styles */
-<<<<<<< HEAD
+
     .dropdown-menu {
         position: relative;
         display: none;
@@ -275,7 +269,7 @@ a {
         background: #fff;
         width: 250%;
         left: -75%;
-        top: 85px
+        top: 65px
     }
     .dropdown-menu::before {
         content: "";
@@ -292,8 +286,6 @@ a {
          margin-top: 0; 
      }
     
-=======
->>>>>>> parent of ef671fc (updated to match main branch)
 
     .dropdown-item:hover, .dropdown-item:focus {
         background-color: var(--dnc-primary);
@@ -319,16 +311,14 @@ a {
         margin: 0;
         padding: 15px 20px;
     }
-<<<<<<< HEAD
 
-=======
     .left-nav {
         padding: 0px;
         border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
         border-radius: 0 15px 0 0;
         
     }
->>>>>>> parent of ef671fc (updated to match main branch)
+
     .content-nav-header {
         font-size: 2vw;
     }
@@ -340,8 +330,11 @@ a {
         vertical-align: middle;
         margin-top: 5%
     }
-    .content-nav:hover{
+    .content-nav-item {
         font-size: 1.75vw;
+    }
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size: 2vw;
     }
     
 
@@ -368,11 +361,11 @@ a {
     /* 2. Navigation Styles */
     
     .navbar-brand {
-        width: 120px;
-        margin: 0 20% 0 0%;
+        /* width: 100px; */
+        margin: 0 10% 0 0%;
     }
     .navbar-brand > img {
-        margin-left: 125%
+        margin-left: 50%
     }
     .nav-link {
         font-size: 1.15vw;
@@ -394,6 +387,73 @@ a {
         
     }
     
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+}
+
+@media only screen and (min-width: 1600px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    
+    .navbar-brand {
+        margin: 0 15% 0 0%;
+    }
+    .navbar-brand > img {
+        margin-left: 100%
+    }
+    
+    
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+}
+
+@media only screen and (min-width: 2000px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    
+    .navbar-brand {
+        margin: 0 20% 0 0%;
+    }
+    .navbar-brand > img {
+        margin-left: 300%
+    }
+    
+    .content-nav-item {
+        font-size: 1vw;
+    }
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size: 1.25vw;
+    }
     /* 3. Heading Styles */
 
 
