@@ -2,9 +2,9 @@
       require_once("components/header.php");
 ?>
 
-<div class="container-lg tests">
+<div class="container tests">
     <div class="row mt-4">
-        <div class="col-sm-12 col-md-12 col-lg-4 left-nav">
+        <div class="col-md-4 left-nav">
             <h4 class="content-nav-header">On This Page</h4><br>
             <ul style="padding:0;">
                 <li class="content-nav-item">
@@ -26,7 +26,7 @@
             </ul>
         </div>
         <div class="col-lg-1"></div>
-        <div class="col-sm-12 col-md-12 col-lg-7">
+        <div class="col-lg-7">
             <section id="News">
                 <h3 class="my-2">News</h3><br>
                 <p class="mb-4">The Calgary Parks Foundation is exploring the concept of a 

@@ -60,44 +60,19 @@ a {
     margin-left: 0px;
 }
 
-.dropdown-menu {
-    position: relative;
-    display: none;
-    color:#fff;
-    background: #fff;
-    width: 250%;
-    left: -75%;
-    top: 85px
-}
-.dropdown-menu::before {
-    content: "";
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 10px solid #fff;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-.dropdown:hover .dropdown-menu {
-     display: block;
-     margin-top: 0; 
- }
 
 
 
-/* This, for some reason, centers the header. */
+
 .navbar > .container-fluid {
     justify-content: left;
-}
-
+} 
 
 .navbar-brand {
     margin: 0 50% 0 0%;
-    font-weight: bold;
 }
 .navbar-brand > img {
-    width: 120px;
+    width: auto;
     margin: 0 0% 0 -0%;
 }
 
@@ -257,6 +232,56 @@ a {
 }
 
 
+@media only screen and (min-width: 693px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    .navbar-nav{ 
+        left: -133%
+    }
+    .navbar-brand {
+        margin: 0 55% 0 0%;
+    }
+    .navbar-brand > img {
+        margin: 0 0% 0 0%;
+    }
+    /* Resources Page */
+    
+    .left-nav {
+        padding: 0px;
+       /*  border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4); */
+/*         border-radius: 0 15px 0 0; */
+        
+    }
+    .content-nav-item {
+        font-size: 4vw;
+    }
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size: 4.25vw;
+    }
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+    .form-label {
+        display: block;
+    }
+}
+
+
+
 @media only screen and (min-width: 992px) {
     /* 
     1. Header Styles
@@ -270,9 +295,30 @@ a {
 
 
     /* 2. Navigation Styles */
-   /*  .dropdown-menu {
-        top: 65px
-    } */
+    .dropdown-menu {
+        position: relative;
+        display: none;
+        color:#fff;
+        background: #fff;
+        width: 250%;
+        left: -75%;
+        top: 85px
+    }
+    .dropdown-menu::before {
+        content: "";
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 10px solid #fff;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .dropdown:hover .dropdown-menu {
+         display: block;
+         margin-top: 0; 
+     }
+    
 
     .dropdown-item:hover, .dropdown-item:focus {
         background-color: var(--dnc-primary);
@@ -306,7 +352,7 @@ a {
         margin: 0;
         padding: 15px 20px;
     }
-    
+
     .content-nav-header {
         font-size: 2vw;
     }
