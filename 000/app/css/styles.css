@@ -11,11 +11,6 @@
     --dnc-brand-font: proxima-nova, sans-serif;
 }
 
-
-/* Colour Guide */
-
-
-
 /* 
 1. Header Styles
 2. Navigation Styles
@@ -24,7 +19,6 @@
 5. Footer Styles
 6. Media Queries 
 */
-
 
 html {
     overflow-x: hidden;
@@ -116,8 +110,128 @@ a {
 }
 
 /* 4. Body Styles */
+main {
+    padding: 2% 10% 0;
+    margin: 0 auto;
+}
 #contactHeader {
    object-fit: fill;
+}
+
+/* 4.?? Main > Event Highlight Banner */
+.highlight-frame {
+    background-color: #f2f2f2;
+    border-radius: 0 10px 0 10px;
+    padding: 2% 10%;
+    margin: 0 auto;
+}
+.highlight-frame h4 {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.highlight-desc {
+    margin: 5px 0;
+    padding-top: 75px;
+    font-size: 16px;
+}
+.highlight-info {
+    justify-items: center;
+}
+.highlight-info > img {
+    max-width: 200px !important;
+}
+
+/* Main > Event Widget > Event Card */
+
+/* 4.?? Main Page - Event Card  */
+.eventswidget {
+    align-items: center;
+    margin: 0 auto;
+}
+
+.event_card {
+    margin-top: 12px;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px 0 0 0;
+    background: #EEECDC;
+    font-family: Proxima Novo, Arial, Helvetica, sans-serif;
+    color: var(--dnc-secondary4);
+}
+.event_date {
+    width: 65px;
+    height: 65px;
+    background-color: #EEECDC;
+    border-radius: inherit;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    color: var(--dnc-secondary4);
+}
+.event_month {
+    padding-top: 6px;
+    font-size: 13px;
+    line-height: 14px;
+}
+.event_day {
+    font-size: 36px;
+    line-height: 36px;
+}
+.event_imagecontainer {
+    width: inherit;
+    height: 50%;
+    display: inline;
+    border-radius: inherit;
+    overflow: hidden;
+}
+.event_imagecontainer img {
+    width: inherit;
+    border-radius: inherit;
+    height: 50%;
+    display: inline;
+    position: relative;
+}
+.event_details {
+    padding: 0 5%;
+}
+.event_name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.event_time {
+    font-size: 12px;
+    padding-left: 18%;
+}
+.event_description {
+    font-size: 14px;
+    text-align: justify;
+}
+.event_more {
+    text-align: right;
+}
+
+/* Resources > #Map of Services */
+.mapOfServices-frame {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.mapOfServices-info {
+    border-right: 2px solid var(--dnc-secondary4);
+    border-radius: 0 6px 6px 0;
+}
+.mapOfServices-frame h4 {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.mapOfServices-frame p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.mapOfServices-frame iframe {
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 /* 5. Footer Styles */
@@ -161,7 +275,6 @@ a {
 
 
     /* 4. Body Styles */
-
 
     /* 5. Footer Styles */
     .form-label {
@@ -295,7 +408,10 @@ a {
     /* 3. Heading Styles */
 
     /* 4. Body Styles */
-
+    /* 4.?? Main > Event Highlight Banner */
+    .highlight-info > img {
+        width: 90%;
+    }
     /* 5. Footer Styles */
 }
 @media only screen and (min-width: 1200px) {
@@ -347,7 +463,10 @@ a {
     /* 3. Heading Styles */
 
     /* 4. Body Styles */
-
+    /* 4.?? Main > Event Highlight Banner */
+    .highlight-info > img {
+        width: 100%;
+    }
     /* 5. Footer Styles */
 }
 @media only screen and (min-width: 1600px) {
