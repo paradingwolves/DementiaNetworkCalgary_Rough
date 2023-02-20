@@ -42,6 +42,7 @@
     <title><?php echo $page_title; ?></title>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="img/logo.png" rel="icon"/>
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-DNC-dark">
     <div class="container-fluid"><span></span>
@@ -92,7 +93,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="resourcesDementia.php#mapOfServices">Map of Services in Calgary</a>
               <a class="dropdown-item" href="resourcesDementia.php#translatedDocuments">Translated Documents</a>
-              <a class="dropdown-item" href="resourcesDementia.php#PrintAtHome">Print at Home Tools</a>
+              <a class="dropdown-item" href="resourcesDementia.php#printAtHomeTools">Print at Home Tools</a>
             </div>
           </li>
           <li class="nav-item mx-3">

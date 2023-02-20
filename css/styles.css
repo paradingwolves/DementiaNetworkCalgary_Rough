@@ -56,9 +56,7 @@ a {
 
 /* 2. Navigation Styles */
 
-.tests {
-    margin-left: 0px;
-}
+
 
 
 .navbar > .container-fluid {
@@ -254,6 +252,7 @@ a {
 /*         border-radius: 0 15px 0 0; */
         
     }
+    
     .content-nav-item:hover, .content-nav-item:hover>a {
         font-size: 4.25vw;
     }
@@ -261,7 +260,9 @@ a {
 
 
     /* 4. Body Styles */
-
+    .resourcesText, dd, dt {
+        font-size: 1.75vw;
+    }
 
     /* 5. Footer Styles */
     .form-label {
@@ -363,14 +364,18 @@ a {
     .content-nav-item:hover, .content-nav-item:hover>a {
         font-size: 2vw;
     }
-    
+    .tests {
+        margin-left: -0%;
+    }
 
     /* 3. Heading Styles */
 
 
     /* 4. Body Styles */
 
-    
+    .resourcesText, dd, dt {
+        font-size: 1.5vw;
+    }
     /* 5. Footer Styles */
 }
 @media only screen and (min-width: 1200px) {
@@ -413,12 +418,23 @@ a {
         border-radius: 0 15px 0 0;
         
     }
-    
+    .content-nav-item {
+        font-size: 26px;
+    }
+    .content-nav-item>a {
+        vertical-align: middle;
+        margin-top: 10px;
+    }
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size: 30px;
+    }
     /* 3. Heading Styles */
 
 
     /* 4. Body Styles */
-
+    .resourcesText, dd, dt {
+        font-size: 1.2vw;
+    }
 
     /* 5. Footer Styles */
 }
@@ -449,7 +465,9 @@ a {
 
 
     /* 4. Body Styles */
-
+    .resourcesText, dd, dt {
+        font-size: .85vw;
+    }
 
     /* 5. Footer Styles */
 }
@@ -475,12 +493,7 @@ a {
         margin-left: 300%
     }
     
-    .content-nav-item {
-        font-size: 1vw;
-    }
-    .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size: 1.25vw;
-    }
+    
     /* 3. Heading Styles */
 
 
