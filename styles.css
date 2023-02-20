@@ -1,0 +1,504 @@
+/* Typography Guide */
+
+/* Brand Guide */
+:root {
+    --dnc-logo: #27ac84;
+    --dnc-primary: #27AC84;
+    --dnc-secondary1: #8CECBA;
+    --dnc-secondary2: #D9FB5B;
+    --dnc-secondary3: #A7D533;
+    --dnc-secondary4: #2F534A;
+    --dnc-brand-font: proxima-nova, sans-serif;
+}
+
+
+/* Colour Guide */
+
+
+
+/* 
+1. Header Styles
+2. Navigation Styles
+3. Heading Styles
+4. Body Styles
+5. Footer Styles
+6. Media Queries 
+*/
+
+
+
+.left-nav {
+    padding: 0px;
+    /* border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+    border-radius: 0 15px 0 0; */
+    background-color: var(--dnc-primary);
+}
+
+
+
+
+
+
+html {
+    overflow-x: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* 1. Header Styles */
+.bg-DNC-dark {
+    background-color: var(--dnc-primary);
+}
+.bg-DNC-2 {
+    background-color: var(--dnc-secondary1);
+}
+
+/* 2. Navigation Styles */
+
+
+
+
+.navbar > .container-fluid {
+    justify-content: left;
+} 
+
+.navbar-brand {
+    margin: 0 50% 0 0%;
+}
+.navbar-brand > img {
+    width: auto;
+    margin: 0 0% 0 -0%;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--dnc-primary);
+}
+.nav-link {
+    text-align: center;
+    color: white;
+}
+.content-nav-header{
+    color: white;
+    text-align: center;
+    font-size: 5vw;
+}
+.content-nav-item {
+    font-size: 4vw;
+    list-style-type: none;
+    text-align: center;
+}
+.content-nav-item>a {
+    color: var(--dnc-secondary4);
+    display:block; 
+    width: inherit;
+    font-weight: 500;
+}
+.content-nav-item:hover, .content-nav-item:hover>a {
+    background-color: white;
+    color: var(--dnc-primary);
+    font-size: 4.75vw;
+}
+
+.dropdown-item {
+    text-align: center;
+}
+
+#DLH_Button {
+    background-color: var(--dnc-secondary4);
+}
+#MP_Button, .btn-dnc-yellow {
+    background-color: var(--dnc-secondary2);
+}
+.navbar-brand > img {
+    width: 120px;
+}
+#DLH_Button, #MP_Button {
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+
+/* 3. Heading Styles */
+.left-nav h4 {
+    background-color: var(--dnc-secondary4);
+    color: #e5ece3;
+}
+.left-nav {
+    background-color: #f3f3f3;
+}
+.left-nav>a {
+    color: var(--dnc-secondary4);
+}
+
+/* 4. Body Styles */
+#contactHeader {
+   object-fit: fill;
+}
+
+
+/* Resources > #Map of Services */
+.mapOfServices-frame {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.mapOfServices-info {
+    border-right: none;
+    border-radius: 0 6px 6px 0;
+}
+.mapOfServices-frame h4 {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.mapOfServices-frame p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.mapOfServices-frame iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* 5. Footer Styles */
+.form-label {
+    display: none;
+}
+.footer-bottom-bg {
+    background-color: black;
+}
+/* Disclaimer Tooltip */
+.div-tooltip {
+    position: relative;
+    background: transparent;
+    color: white;
+    z-index: 99999;
+    margin-top: 10%
+}
+
+
+
+
+
+
+/* 6. Media Queries */
+
+
+@media only screen and (min-width: 661px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    .navbar-brand {
+        margin: 0 55% 0 0%;
+    }
+    .navbar-brand > img {
+        margin: 0 0% 0 0%;
+    }
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+    
+
+    /* 5. Footer Styles */
+    .form-label {
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 693px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    .navbar-nav{ 
+        left: -133%
+    }
+    .navbar-brand {
+        margin: 0 55% 0 0%;
+    }
+    .navbar-brand > img {
+        margin: 0 0% 0 0%;
+    }
+    /* Resources Page */
+    
+    .left-nav {
+        padding: 0px;
+       /*  border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4); */
+/*         border-radius: 0 15px 0 0; */
+        
+    }
+    
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size: 4.25vw;
+    }
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+    .resourcesText, dd, dt {
+        font-size: 1.75vw;
+    }
+
+    /* 5. Footer Styles */
+    .form-label {
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    .mapOfServices-info {
+        border-right: 2px solid var(--dnc-secondary4);
+    }
+}
+@media only screen and (min-width: 992px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+
+    .dropdown-menu {
+        position: relative;
+        display: none;
+        color:#fff;
+        background: #fff;
+        width: 250%;
+        left: -75%;
+        top: 65px
+    }
+    .dropdown-menu::before {
+        content: "";
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 10px solid #fff;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .dropdown:hover .dropdown-menu {
+         display: block;
+         margin-top: 0; 
+     }
+    
+
+    .dropdown-item:hover, .dropdown-item:focus {
+        background-color: var(--dnc-primary);
+    }
+    .navbar-brand {
+        margin: 0 5% 0 0%;
+    }
+    #DLH_Button, #MP_Button {
+        display: block;
+    }
+    .nav-link {
+        font-size: 1.25vw;
+        text-align: unset;
+    }
+    .left-nav h4 {
+        border-radius: 0 10px 0 0;
+        background-color: var(--dnc-secondary4);
+        color: #e5ece3;
+        font-size: 1.5vw;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 15px 20px;
+    }
+
+    .left-nav {
+        padding: 0px;
+        border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+        border-radius: 0 15px 0 0;
+        
+    }
+
+    .content-nav-header {
+        font-size: 2vw;
+    }
+    .content-nav-item {
+        font-size: 1.25vw;
+    }
+    .content-nav-item>a {
+        line-height: 5vw;
+        vertical-align: middle;
+        margin-top: 5%
+    }
+    .content-nav-item {
+        font-size: 1.75vw;
+    }
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size: 2vw;
+    }
+    .tests {
+        margin-left: -0%;
+    }
+
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+    .resourcesText, dd, dt {
+        font-size: 1.5vw;
+    }
+    /* 5. Footer Styles */
+}
+@media only screen and (min-width: 1200px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    
+    .navbar-brand {
+        /* width: 100px; */
+        margin: 0 10% 0 0%;
+    }
+    .navbar-brand > img {
+        margin-left: 50%
+    }
+    .nav-link {
+        font-size: 1.15vw;
+        text-align: unset;
+    }
+    .left-nav h4 {
+        background-color: var(--dnc-secondary4);
+        font-size: 1.25vw;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 15px 20px;
+    }
+    .left-nav {
+        padding: 0px;
+        border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+        border-radius: 0 15px 0 0;
+        
+    }
+    .content-nav-item {
+        font-size: 26px;
+    }
+    .content-nav-item>a {
+        vertical-align: middle;
+        margin-top: 10px;
+    }
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size: 30px;
+    }
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+    .resourcesText, dd, dt {
+        font-size: 1.2vw;
+    }
+
+    /* 5. Footer Styles */
+}
+
+@media only screen and (min-width: 1600px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    
+    .navbar-brand {
+        margin: 0 15% 0 0%;
+    }
+    .navbar-brand > img {
+        margin-left: 100%
+    }
+    
+    
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+    .resourcesText, dd, dt {
+        font-size: .85vw;
+    }
+
+    /* 5. Footer Styles */
+}
+
+@media only screen and (min-width: 2000px) {
+    /* 
+    1. Header Styles
+    2. Navigation Styles
+    3. Heading Styles
+    4. Body Styles
+    5. Footer Styles 
+    */
+
+    /* 1. Header Styles */
+
+
+    /* 2. Navigation Styles */
+    
+    .navbar-brand {
+        margin: 0 20% 0 0%;
+    }
+    .navbar-brand > img {
+        margin-left: 300%
+    }
+    
+    
+    /* 3. Heading Styles */
+
+
+    /* 4. Body Styles */
+
+
+    /* 5. Footer Styles */
+}
