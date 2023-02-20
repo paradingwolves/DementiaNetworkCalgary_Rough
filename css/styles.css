@@ -26,8 +26,21 @@
 */
 
 
+
+.left-nav {
+    padding: 0px;
+    /* border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
+    border-radius: 0 15px 0 0; */
+    background-color: var(--dnc-primary);
+}
+
+
+
+
+
+
 html {
-    overflow-x: hidden;
+    overflow-x: none;
 }
 a {
     text-decoration: none;
@@ -42,30 +55,24 @@ a {
 }
 
 /* 2. Navigation Styles */
-.tests {
-    margin-left: 0;
-}
+
+
+
 
 .navbar > .container-fluid {
     justify-content: left;
-}
+} 
+
 .navbar-brand {
-    margin: 0 50% 0 0;
+    margin: 0 50% 0 0%;
 }
 .navbar-brand > img {
-    width: 120px;
-    margin: 0 0 0 -0;
+    width: auto;
+    margin: 0 0% 0 -0%;
 }
 
-.dropdown-item {
-    text-align: center;
-}
 .dropdown-item:hover, .dropdown-item:focus {
     background-color: var(--dnc-primary);
-}
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; /* remove the gap so it doesn't close */
 }
 .nav-link {
     text-align: center;
@@ -81,16 +88,20 @@ a {
     list-style-type: none;
     text-align: center;
 }
-.content-nav-item > a {
+.content-nav-item>a {
     color: var(--dnc-secondary4);
     display:block; 
     width: inherit;
     font-weight: 500;
 }
-.content-nav-item:hover, .content-nav-item:hover > a {
+.content-nav-item:hover, .content-nav-item:hover>a {
     background-color: white;
     color: var(--dnc-primary);
-    font-size: 1.75vw;
+    font-size: 4.75vw;
+}
+
+.dropdown-item {
+    text-align: center;
 }
 
 #DLH_Button {
@@ -99,9 +110,18 @@ a {
 #MP_Button, .btn-dnc-yellow {
     background-color: var(--dnc-secondary2);
 }
+.navbar-brand > img {
+    width: 120px;
+}
 #DLH_Button, #MP_Button {
     display: none;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
 
 /* 3. Heading Styles */
 .left-nav h4 {
@@ -111,7 +131,7 @@ a {
 .left-nav {
     background-color: #f3f3f3;
 }
-.left-nav > a {
+.left-nav>a {
     color: var(--dnc-secondary4);
 }
 
@@ -120,6 +140,32 @@ a {
    object-fit: fill;
 }
 
+
+/* Resources > #Map of Services */
+.mapOfServices-frame {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.mapOfServices-info {
+    border-right: none;
+    border-radius: 0 6px 6px 0;
+}
+.mapOfServices-frame h4 {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.mapOfServices-frame p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.mapOfServices-frame iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
 /* 5. Footer Styles */
 .form-label {
     display: none;
@@ -127,7 +173,6 @@ a {
 .footer-bottom-bg {
     background-color: black;
 }
-
 /* Disclaimer Tooltip */
 .div-tooltip {
     position: relative;
@@ -137,7 +182,14 @@ a {
     margin-top: 10%
 }
 
+
+
+
+
+
 /* 6. Media Queries */
+
+
 @media only screen and (min-width: 661px) {
     /* 
     1. Header Styles
@@ -152,22 +204,24 @@ a {
 
     /* 2. Navigation Styles */
     .navbar-brand {
-        margin: 0 55% 0 0;
+        margin: 0 55% 0 0%;
     }
     .navbar-brand > img {
-        margin: 0 0 0 0;
+        margin: 0 0% 0 0%;
     }
     /* 3. Heading Styles */
 
 
     /* 4. Body Styles */
-
+    
 
     /* 5. Footer Styles */
     .form-label {
         display: block;
     }
 }
+
+
 @media only screen and (min-width: 693px) {
     /* 
     1. Header Styles
@@ -179,36 +233,47 @@ a {
 
     /* 1. Header Styles */
 
+
     /* 2. Navigation Styles */
     .navbar-nav{ 
         left: -133%
     }
     .navbar-brand {
-        margin: 0 55% 0 0;
+        margin: 0 55% 0 0%;
     }
     .navbar-brand > img {
-        margin: 0 0 0 0;
+        margin: 0 0% 0 0%;
     }
-    /* Left Nav */
+    /* Resources Page */
+    
     .left-nav {
-        padding: 0;
+        padding: 0px;
        /*  border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4); */
 /*         border-radius: 0 15px 0 0; */
         
     }
-    .content-nav-item {
-        font-size: 4vw;
-    }
+    
     .content-nav-item:hover, .content-nav-item:hover>a {
         font-size: 4.25vw;
     }
     /* 3. Heading Styles */
 
+
     /* 4. Body Styles */
+    .resourcesText, dd, dt {
+        font-size: 1.75vw;
+    }
 
     /* 5. Footer Styles */
     .form-label {
         display: block;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    .mapOfServices-info {
+        border-right: 2px solid var(--dnc-secondary4);
     }
 }
 @media only screen and (min-width: 992px) {
@@ -222,7 +287,9 @@ a {
 
     /* 1. Header Styles */
 
+
     /* 2. Navigation Styles */
+
     .dropdown-menu {
         position: relative;
         display: none;
@@ -246,11 +313,13 @@ a {
          display: block;
          margin-top: 0; 
      }
+    
+
     .dropdown-item:hover, .dropdown-item:focus {
         background-color: var(--dnc-primary);
     }
     .navbar-brand {
-        margin: 0 5% 0 0;
+        margin: 0 5% 0 0%;
     }
     #DLH_Button, #MP_Button {
         display: block;
@@ -270,8 +339,9 @@ a {
         margin: 0;
         padding: 15px 20px;
     }
+
     .left-nav {
-        padding: 0;
+        padding: 0px;
         border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
         border-radius: 0 15px 0 0;
         
@@ -281,21 +351,31 @@ a {
         font-size: 2vw;
     }
     .content-nav-item {
-        font-size: 1.75vw;
+        font-size: 1.25vw;
     }
-    .content-nav-item > a {
-        line-height: 50px;
+    .content-nav-item>a {
+        line-height: 5vw;
         vertical-align: middle;
         margin-top: 5%
+    }
+    .content-nav-item {
+        font-size: 1.75vw;
     }
     .content-nav-item:hover, .content-nav-item:hover>a {
         font-size: 2vw;
     }
+    .tests {
+        margin-left: -0%;
+    }
 
     /* 3. Heading Styles */
 
+
     /* 4. Body Styles */
 
+    .resourcesText, dd, dt {
+        font-size: 1.5vw;
+    }
     /* 5. Footer Styles */
 }
 @media only screen and (min-width: 1200px) {
@@ -309,10 +389,12 @@ a {
 
     /* 1. Header Styles */
 
+
     /* 2. Navigation Styles */
+    
     .navbar-brand {
         /* width: 100px; */
-        margin: 0 10% 0 0;
+        margin: 0 10% 0 0%;
     }
     .navbar-brand > img {
         margin-left: 50%
@@ -322,18 +404,19 @@ a {
         text-align: unset;
     }
     .left-nav h4 {
-        margin: 0;
-        padding: 15px 20px;
         background-color: var(--dnc-secondary4);
         font-size: 1.25vw;
-        font-weight: 600;
         letter-spacing: 1px;
+        font-weight: 600;
         text-transform: uppercase;
+        margin: 0;
+        padding: 15px 20px;
     }
     .left-nav {
-        padding: 0;
+        padding: 0px;
         border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
         border-radius: 0 15px 0 0;
+        
     }
     .content-nav-item {
         font-size: 26px;
@@ -342,14 +425,20 @@ a {
         vertical-align: middle;
         margin-top: 10px;
     }
-
-
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size: 30px;
+    }
     /* 3. Heading Styles */
 
+
     /* 4. Body Styles */
+    .resourcesText, dd, dt {
+        font-size: 1.2vw;
+    }
 
     /* 5. Footer Styles */
 }
+
 @media only screen and (min-width: 1600px) {
     /* 
     1. Header Styles
@@ -361,20 +450,28 @@ a {
 
     /* 1. Header Styles */
 
+
     /* 2. Navigation Styles */
+    
     .navbar-brand {
-        margin: 0 15% 0 0;
+        margin: 0 15% 0 0%;
     }
     .navbar-brand > img {
         margin-left: 100%
     }
     
+    
     /* 3. Heading Styles */
 
+
     /* 4. Body Styles */
+    .resourcesText, dd, dt {
+        font-size: .85vw;
+    }
 
     /* 5. Footer Styles */
 }
+
 @media only screen and (min-width: 2000px) {
     /* 
     1. Header Styles
@@ -386,23 +483,22 @@ a {
 
     /* 1. Header Styles */
 
+
     /* 2. Navigation Styles */
+    
     .navbar-brand {
-        margin: 0 20% 0 0;
+        margin: 0 20% 0 0%;
     }
     .navbar-brand > img {
         margin-left: 300%
     }
     
-    .content-nav-item {
-        font-size: 1vw;
-    }
-    .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size: 1.25vw;
-    }
+    
     /* 3. Heading Styles */
 
+
     /* 4. Body Styles */
+
 
     /* 5. Footer Styles */
 }
