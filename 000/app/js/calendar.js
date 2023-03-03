@@ -38,7 +38,7 @@ const eventsArr = [
         name: 'Event 1',
         time: '10:00',
         address: '456 Park Avenue, Anytown, USA',
-        type: 'conversation',
+        type: 'conversation cafe online',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         mapURL: 'https://www.google.com/maps?q=456+Park+Avenue'
       },
@@ -46,7 +46,7 @@ const eventsArr = [
         name: 'Event 2',
         time: '14:00',
         address: '789 Elm Street, Anytown, USA',
-        type: 'serenity',
+        type: 'educational webinars',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         mapURL: 'https://www.google.com/maps?q=789+Elm+Street'
       },
@@ -65,10 +65,9 @@ eventsArr.forEach(eventDay => {
   });
 });
 
-
 getEvents();
 
-// function to add days
+//initialize the calendar
 function initCalendar() {
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month + 1, 0);
@@ -83,19 +82,27 @@ function initCalendar() {
 
   // adding days
   let days = "";
+  let weekCount = 0;
 
-  // prev month days
-  for (let x = day; x > 0; x--) {
-    days += `<div class="day prev-date">${prevDays - x + 1}</div>`;
+  // add empty days for the first week if necessary
+  days += "<div class='row week'>";
+  if (day !== 0) {
+    if (!prevDays || day === 1) { // add check for prevDays
+      days += `<div class="day prev-date">${prevDays || ""}</div>`;
+    } else {
+      for (let x = day; x > 0; x--) {
+        days += `<div class="day prev-date">${prevDays - x + 1}</div>`;
+      }
+    }
+    weekCount++;
   }
 
   // current month days
   for (let i = 1; i <= lastDate; i++) {
-
     // check if event is present on current day
     let event = false;
     eventsArr.forEach((eventObj) => {
-      if(
+      if (
           eventObj.day === i &&
           eventObj.month === month + 1 &&
           eventObj.year === year
@@ -111,40 +118,67 @@ function initCalendar() {
         year === new Date().getFullYear() &&
         month === new Date().getMonth()
     ) {
-
       activeDay = i;
       getActiveDay(i);
       updateEvents(i);
 
-      if(event){
+      if (event) {
         days += `<div class="day today active event">${i}</div>`;
-      } else{
+      } else {
         days += `<div class="day active today">${i}</div>`;
       }
     } else {
       // add remaining as it is
-      if(event){
+      if (event) {
         days += `<div class="day event">${i}</div>`;
-      } else{
+      } else {
         days += `<div class="day">${i}</div>`;
       }
     }
+
+    // if we reach the end of a week, start a new one
+    if ((day + i) % 7 === 0 && i !== lastDate) {
+      days += `</div>
+                   <div class="row event-info" style="display:none">
+                     <div class="event-info-content">
+                     
+                     </div>
+                   </div>
+                <div class='row week'>`;
+      weekCount++;
+    }
   }
 
-  // next month days
-  for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="day next-date">${j}</div>`;
+  // add empty days for the last week if necessary
+  if ((day + lastDate) % 7 !== 0) {
+    for (let j = 1; j <= nextDays; j++) {
+      days += `<div class="day next-date">${j}</div>`;
+    }
+    weekCount++;
+  }
+
+  // close the last week if it's not already closed
+  if (weekCount > 0 && days.slice(-13) !== "</div></div>") {
+    days += `</div>
+             <div class="row event-info" style="display:none">
+               <div class="event-info-content"></div>
+             </div>`;
   }
 
   daysContainer.innerHTML = days;
 
-  // add listener after calendar initalized
+  // update the height of the calendar based on the number of weeks
+  const calendarHeight = weekCount * 100 / 6; // assuming 6 weeks is the max
+  calendar.style.height = `${calendarHeight}%`;
+
+  eventRow();
+
+  // add listener after calendar initialized
   addListener();
 }
-
 initCalendar();
 
-// prev month
+// prev month and next month
 function prevMonth() {
   /* month --; */
   if(month < 0){
@@ -153,8 +187,6 @@ function prevMonth() {
   }
   initCalendar();
 }
-
-// next month
 function nextMonth() {
   if(month > 11){
     month = 00;
@@ -186,16 +218,13 @@ next.addEventListener('click', function (){
 });
 
 // go to today function
-
 todayBtn.addEventListener("click", () => {
   today = new Date();
   month = today.getMonth();
   year = today.getFullYear();
   initCalendar();
 });
-
 // go to date function
-
 dateInput.addEventListener("keyup", (e) => {
   //allow only nuumbers
   dateInput.value = dateInput.value.replace(/[^0-9/]/g, "");
@@ -214,11 +243,9 @@ dateInput.addEventListener("keyup", (e) => {
     }
   }
 });
-
 gotoBtn.addEventListener("click", gotoDate);
 
 // function to go to entered date
-
 function gotoDate(){
   const dateArr = dateInput.value.split("/");
   console.log(dateArr);
@@ -238,19 +265,16 @@ function gotoDate(){
 const addEventBtn = document.querySelector(".add-event");
 const addEventContainer = document.querySelector(".add-event-wrapper");
 const addEventCloseBtn = document.querySelector(".close");
-const addeventName = document.querySelector(".event-name");
+const addEventName = document.querySelector(".event-name");
 const addEventFrom = document.querySelector(".event-time-from");
 const addEventTo = document.querySelector(".event-time-to");
-
 
 addEventBtn.addEventListener("click", () => {
   addEventContainer.classList.toggle("active");
 });
-
 addEventCloseBtn.addEventListener("click", () => {
   addEventContainer.classList.remove("active");
 });
-
 document.addEventListener("click", (e) => {
   //if click outside
   if(e.target !== addEventBtn && !addEventContainer.contains(e.target)) {
@@ -259,10 +283,9 @@ document.addEventListener("click", (e) => {
 });
 
 // allow only 50 chars in title
-addeventName.addEventListener("input", () => {
-  addeventName.value = addeventName.value.slice(0, 50);
+addEventName.addEventListener("input", () => {
+  addEventName.value = addEventName.value.slice(0, 50);
 });
-
 
 // time format in from and to time
 addEventFrom.addEventListener("input", () => {
@@ -276,7 +299,6 @@ addEventFrom.addEventListener("input", () => {
     addEventFrom.value = addEventFrom.value.slice(0, 5);
   }
 });
-
 addEventTo.addEventListener("input", () => {
   addEventTo.value = addEventTo.value.replace(/[^0-9:]/g, "");
   //if two numbers added and last char is not :, add :
@@ -370,11 +392,81 @@ function addListener()  {
   });
 }
 
-
 function getActiveDay(date) {
   const day = new Date(year, month, date);
   eventDay.innerHTML = day.toString().split(" ")[0];
   eventDate.innerHTML = date + " " + months[month] + " " + year;
+}
+
+// show and hide Events for a given day underneath the week that day lives in
+function eventRow() {
+  // add event listener to each day
+  const days = document.querySelectorAll(".day");
+  days.forEach((day) => {
+    day.addEventListener("click", () => {
+      // hide previously expanded event rows
+      const allEventInfoRows = document.querySelectorAll(".event-info-row");
+      allEventInfoRows.forEach((eventInfoRow) => {
+        if (eventInfoRow.classList.contains("open")) {
+          eventInfoRow.classList.remove("open");
+          eventInfoRow.style.display = "none";
+        }
+      });
+
+      // toggle the display of the event information row
+      const eventInfoRow = day.parentElement.nextElementSibling;
+      eventInfoRow.style.display = eventInfoRow.style.display === "none" ? "flex" : "none";
+
+      // add "active" class to the event info row
+      eventInfoRow.classList.toggle("open");
+
+      // get the event information for the clicked day
+      const dayNumber = parseInt(day.textContent);
+      const event = eventsArr.find((eventObj) => (
+          eventObj.day === dayNumber &&
+          eventObj.month === month + 1 &&
+          eventObj.year === year
+      ));
+
+
+      // set the event information as the content of the event information row
+      const eventInfoContent = eventInfoRow.querySelector(".event-info-content");
+      if (event) {
+        let events = "";
+        event.events.forEach((event) => {
+            // assigns a class for each event type, so we can colour code it
+          let eventTypeClass;
+          let eventdesc;
+          if (event.type === 'conversation cafe online') {
+            eventTypeClass = "conversation-online";
+            eventdesc = "Conversation Cafe’s are open to anyone regardless of where you are in the dementia journey."
+          } else if (event.type === "conversation cafe in person") {
+            eventTypeClass = "conversation-person";
+            eventdesc = "Conversation Cafe’s are open to anyone regardless of where you are in the dementia journey."
+          } else if (event.type === "educational webinars") {
+            eventTypeClass = "webinar";
+            eventdesc = "Join us for an education webinar!";
+          } else if (event.type === "community gatherings") {
+            eventTypeClass = "gathering";
+            eventdesc = "community gathering idk";
+          }
+          events += `<div class="-event">
+                        <div class="-event-type ${eventTypeClass}">
+                          <div class="-event-time">${event.time}</div>
+                        </div>
+                        <div class="-event-infoContainer">
+                          <div class="-event-infoName">${event.name}</div>
+                          <div class="-event-infoDesc">${eventdesc}</div>
+                        </div>
+                      </div>`;
+        });
+        eventInfoContent.innerHTML = events;
+      } else {
+        eventInfoContent.textContent = "No events";
+      }
+
+    });
+  });
 }
 
 function updateEvents(date) {
@@ -388,12 +480,24 @@ function updateEvents(date) {
       event.events.forEach((event) => {
         events += `
         <div class="event">
-          <div class="title">
-            <i class="fas fa-circle"></i>
-            <h3 class="event-title">${event.name}</h3>
+          <div class="-event-dat">
+            <div class="-event-type">
+              <div class="-event-calendarmonth">Sep</div>
+              <div class="-event-calendarday">9</div>
+            </div>
           </div>
-          <div class="event-time">
-            <span class="event-time">${event.time}</span>
+          <div class="-event-infoContainer">
+              <div class="-event-infoInner">
+                <div class="-event-infoType">
+                  <div class="-event-infoTypeInner">Lecture</div>
+                </div>
+                <div class="-event-infoName">Info Name</div>
+                <div class="-event-infoTime">
+                  <div class="-event-infoTimeInner">
+                    <div title="10:00" class="jsx-3190899818 eapp-events-calendar-time-time">10:00</div>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
         `;
@@ -414,7 +518,7 @@ function updateEvents(date) {
 
 // function to add events
 addEventSubmit.addEventListener("click", () => {
-  const eventName = addeventName.value;
+  const eventName = addEventName.value;
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
   console.log(eventName);
@@ -468,7 +572,7 @@ addEventSubmit.addEventListener("click", () => {
   // remove active from add event form
   addEventContainer.classList.remove("active");
   // reset the form
-  addeventName.value = "";
+  addEventName.value = "";
   addEventFrom.value = "";
   addEventTo.value = "";
 
@@ -522,7 +626,6 @@ eventsContainer.addEventListener("click", (e) => {
 })
 
 // save events in local storage
-
 function saveEvents() {
   localStorage.setItem("events", JSON.stringify(eventsArr));
 }

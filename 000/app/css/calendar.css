@@ -5,6 +5,10 @@
     --dnc-secondary2: #D9FB5B;
     --dnc-secondary3: #A7D533;
     --dnc-secondary4: #2F534A;
+    --conversation-online: #70A7FF;
+    --conversation-person: #B98FF5;
+    --webinar: #FF85BA;
+    --gathering: #FDBA9B;
 }
 
 .outer-shell {
@@ -62,13 +66,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 28px;
     font-size: 1rem;
     font-weight: 500;
     text-transform: capitalize;
 }
 .calendar .weekdays div {
-    width: 14.28%;
+    width: calc(100% / 7);
     height: 100%;
     display: flex;
     align-items: center;
@@ -84,13 +88,22 @@
     font-weight: 500;
     margin-bottom: 20px;
 }
-
-.calendar .days .day {
-    width: 14.28%;
+.calendar .week {
+    width: 105%;
+    padding: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.calendar .day {
+    width: calc(100% / 7);
     height: 90px;
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     cursor: pointer;
     color: var(--dnc-primary);
     border: 1px solid #f5f5f5;
@@ -102,7 +115,7 @@
 }
 
 .calendar .days .prev-date, .calendar .days .next-date {
-    color: #b3b3b3
+    color: #b3b3b3;
 }
 
 .calendar .days .active {
@@ -232,6 +245,59 @@
     font-weight: 400;
     color: #878895
 }
+.-event {
+    height: 85px;
+    padding-bottom: 8px;
+}
+.event-info {
+    width: 95%;
+    height: 100%;
+    padding: inherit;
+}
+.-event-type {
+    width: 19%;
+    height: 100%;
+    display: inline-block;
+}
+    /* Event Type Colours */
+    .conversation-online {
+        background: linear-gradient(to left, var(--conversation-online) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    .conversation-person {
+        background: linear-gradient(to left, var(--conversation-person) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    .webinar {
+        background: linear-gradient(to left, var(--webinar) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    .gathering {
+        background: linear-gradient(to left, var(--gathering) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+.-event-time {
+    width: max-content;
+    vertical-align: middle;
+    padding-left: 50%;
+    padding-top: 10%;
+
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.-event-infoContainer {
+    width: 75%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3%;
+}
+.-event-infoName {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.-event-infoDesc {
+    font-size: .9rem;
+    font-weight: normal;
+}
+
 
 .events{
     width: 100%;
@@ -244,7 +310,7 @@
     padding: 4px
 }
 
-.events .event {
+/*.events .event {
     position: relative;
     width: 95%;
     min-height: 70px;
@@ -319,7 +385,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     color: #878787;
-}
+}*/
 
 .add-event-wrapper {
     position: absolute;
