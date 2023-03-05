@@ -268,6 +268,9 @@ const addEventCloseBtn = document.querySelector(".close");
 const addEventName = document.querySelector(".event-name");
 const addEventFrom = document.querySelector(".event-time-from");
 const addEventTo = document.querySelector(".event-time-to");
+const addEventType = document.querySelector(".addEvent-type");
+const addEventDesc = document.querySelector(".addEvent-desc");
+const addEventAddress = document.querySelector(".addEvent-address");
 
 addEventBtn.addEventListener("click", () => {
   addEventContainer.classList.toggle("active");
@@ -469,49 +472,8 @@ function eventRow() {
   });
 }
 
+// this can't be deleted for some reason but whatever
 function updateEvents(date) {
-  let events = "";
-  eventsArr.forEach((event) => {
-    if (
-        date === event.day &&
-        month + 1 === event.month &&
-        year === event.year
-    ) {
-      event.events.forEach((event) => {
-        events += `
-        <div class="event">
-          <div class="-event-dat">
-            <div class="-event-type">
-              <div class="-event-calendarmonth">Sep</div>
-              <div class="-event-calendarday">9</div>
-            </div>
-          </div>
-          <div class="-event-infoContainer">
-              <div class="-event-infoInner">
-                <div class="-event-infoType">
-                  <div class="-event-infoTypeInner">Lecture</div>
-                </div>
-                <div class="-event-infoName">Info Name</div>
-                <div class="-event-infoTime">
-                  <div class="-event-infoTimeInner">
-                    <div title="10:00" class="jsx-3190899818 eapp-events-calendar-time-time">10:00</div>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        `;
-      });
-    }
-  });
-  //if nothing found
-  if(!events){
-    events = `<div class="no-event">
-                <h3>No Events</h3>
-              </div>
-              `;
-  }
-  eventsContainer.innerHTML = events;
   // save events when new one added
   saveEvents();
 }
@@ -521,23 +483,21 @@ addEventSubmit.addEventListener("click", () => {
   const eventName = addEventName.value;
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
+  const eventType = addEventType.value;
+  const eventDesc = addEventDesc.value;
+  const eventAddress = addEventAddress.value;
   console.log(eventName);
   console.log(eventTimeFrom, eventTimeTo);
   // some validations
-
   const timeFromArr = eventTimeFrom.split(":");
   const timeToArr = eventTimeTo.split(":");
 
-
-  if(eventName === "" || eventTimeFrom === "" || eventTimeTo=== "") {
+  if(eventName === "" || eventTimeFrom === "" || eventTimeTo=== "" || eventType=== "" || eventDesc=== "") {
     alert("Please Fill Out All Fields");
-
-  }
-  else{
+  } else {
     if(timeFromArr.length !== 2 || timeToArr.length !== 2 || timeFromArr[0] > 23 || timeFromArr[1] > 59 || timeToArr[0] > 23 || timeToArr[1] > 59 ) {
       alert("Invalid Time Format");
     }
-
   }
 
   const timeFrom = convertTime(eventTimeFrom);
@@ -546,6 +506,9 @@ addEventSubmit.addEventListener("click", () => {
   const newEvent = {
     name: eventName,
     time: timeFrom + " - " + timeTo,
+    description: eventDesc,
+    type: eventType,
+    address: eventAddress,
   };
   let eventAdded = false;
 
@@ -575,6 +538,9 @@ addEventSubmit.addEventListener("click", () => {
   addEventName.value = "";
   addEventFrom.value = "";
   addEventTo.value = "";
+  addEventType.value = "";
+  addEventDesc.value = "";
+  addEventAddress.value = "";
 
   updateEvents(activeDay);
 
@@ -584,6 +550,23 @@ addEventSubmit.addEventListener("click", () => {
     activeDayElem.classList.add("event");
   }
 });
+
+// this little cuties job is to populate the type dropdown
+function populateEventTypeSelect() {
+  let eventTypeSelect = document.querySelector('.addEvent-type');
+
+  // Clear any existing options
+  eventTypeSelect.innerHTML += `<option style="color: #a5a5a5">Please Choose a Type</option>`;
+
+  // Create an option for each event type and add it to the select element
+  validEventTypes.forEach(eventType => {
+    const option = document.createElement('option');
+    option.value = eventType;
+    option.text = eventType;
+    eventTypeSelect.add(option);
+  });
+}
+populateEventTypeSelect();
 
 function convertTime(time) {
   let timeArr = time.split(":");
@@ -625,11 +608,22 @@ eventsContainer.addEventListener("click", (e) => {
   }
 })
 
+
+//just a little buddy to match the width of the .add-event-wrapper to the .calendar-container
+const calendarContainer = document.querySelector('.calendar-container');
+function setAddEventWrapperWidth() {
+  addEventContainer.style.width = `${calendarContainer.offsetWidth}px`;
+}
+
+// Call the function initially and on window resize
+setAddEventWrapperWidth();
+window.addEventListener('resize', setAddEventWrapperWidth);
+
 // save events in local storage
 function saveEvents() {
   localStorage.setItem("events", JSON.stringify(eventsArr));
 }
-function getEvents () {
+function getEvents() {
   if(localStorage.getItem("events" === null)) {
     eventsArr.push( ...JSON.parse(localStorage.getItem("events")));
   }
