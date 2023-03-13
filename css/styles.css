@@ -14,6 +14,49 @@
 
 /* Colour Guide */
 
+.card {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 10px;
+    margin: 20px auto;
+  }
+  
+  .card-img-top {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .card-text {
+    font-size: 18px;
+    color: #888;
+    line-height: 1.5;
+  }
+  
+  .card-text a {
+    color: var(--dnc-secondary4);
+    text-decoration: none;
+  }
+  
+  .card-text a:hover {
+    text-decoration: underline;
+  }
+  
+  .card-text ul {
+    margin-top: 20px;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  
+  
 
 
 /* 
@@ -38,8 +81,11 @@
 
 
 
-
-html {
+main {
+    padding: 2% 10% 0;
+    margin: 0 auto;
+}
+html, body {
     overflow-x: none;
 }
 a {
@@ -56,18 +102,26 @@ a {
 
 /* 2. Navigation Styles */
 
+.tests {
+    margin-left: 0px;
+}
 
-
-
-.navbar > .container-fluid {
-    justify-content: left;
-} 
+.dropdown-menu {
+    position: relative;
+    display: none;
+    color:#fff;
+    background: #fff;
+    width: 250%;
+    left: -75%;
+    top: 85px
+}
 
 .navbar-brand {
     margin: 0 50% 0 0%;
+    font-weight: bold;
 }
 .navbar-brand > img {
-    width: auto;
+    width: 120px;
     margin: 0 0% 0 -0%;
 }
 
@@ -76,13 +130,20 @@ a {
 }
 .nav-link {
     text-align: center;
-    color: white;
+    color: var(--dnc-secondary4);
+    line-height: 100px;
+    padding: 0;
+    
 }
-.content-nav-header{
-    color: white;
-    text-align: center;
-    font-size: 5vw;
+.nav-item {
+    vertical-align: middle;
+    height: 100px;
 }
+
+
+
+
+/* Resources Page */
 .content-nav-item {
     font-size: 4vw;
     list-style-type: none;
@@ -97,7 +158,7 @@ a {
 .content-nav-item:hover, .content-nav-item:hover>a {
     background-color: white;
     color: var(--dnc-primary);
-    font-size: 4.75vw;
+    font-size: 4.25vw;
 }
 
 .dropdown-item {
@@ -110,6 +171,8 @@ a {
 #MP_Button, .btn-dnc-yellow {
     background-color: var(--dnc-secondary2);
 }
+
+
 .navbar-brand > img {
     width: 120px;
 }
@@ -124,47 +187,32 @@ a {
 
 
 /* 3. Heading Styles */
+
+/* Resources Page */
+.content-nav-header{
+    color: white;
+    text-align: center;
+    font-size: 5vw;
+}
 .left-nav h4 {
     background-color: var(--dnc-secondary4);
     color: #e5ece3;
 }
-.left-nav {
-    background-color: #f3f3f3;
-}
-.left-nav>a {
-    color: var(--dnc-secondary4);
-}
+
 
 /* 4. Body Styles */
 #contactHeader {
    object-fit: fill;
 }
 
+/* Resources Page */
 
-/* Resources > #Map of Services */
-.mapOfServices-frame {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.left-nav {
+    background-color: #f3f3f3;
 }
-.mapOfServices-info {
-    border-right: none;
-    border-radius: 0 6px 6px 0;
+.left-nav>a {
+    color: var(--dnc-secondary4);
 }
-.mapOfServices-frame h4 {
-    font-size: 20px;
-    margin-top: 2rem;
-}
-.mapOfServices-frame p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-.mapOfServices-frame iframe {
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
 
 /* 5. Footer Styles */
 .form-label {
@@ -185,6 +233,62 @@ a {
 
 
 
+/* 4.?? Event Page Styles */
+.event-name {
+    position: relative;
+}
+.event-name img {
+    display: block;
+}
+.event-name h2 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    /* Additional styling for the h2 element */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.event-desc {
+    padding: 20px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.event-desc p {
+    margin-bottom: 10px;
+}
+.event-desc a {
+    text-decoration: none;
+}
+
+.event-details {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.event-details-info {
+    border-right: 2px solid var(--dnc-secondary4);
+    border-radius: 0 6px 6px 0;
+}
+.event-details h4 {
+    font-size: 20px;
+    margin-top: 2rem;
+}
+.event-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.event-details iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 
 
 /* 6. Media Queries */
@@ -203,41 +307,12 @@ a {
 
 
     /* 2. Navigation Styles */
-    .navbar-brand {
-        margin: 0 55% 0 0%;
+    .dropdown-menu {
+        top: 70%;
     }
-    .navbar-brand > img {
-        margin: 0 0% 0 0%;
-    }
-    /* 3. Heading Styles */
 
 
-    /* 4. Body Styles */
-    
 
-    /* 5. Footer Styles */
-    .form-label {
-        display: block;
-    }
-}
-
-
-@media only screen and (min-width: 693px) {
-    /* 
-    1. Header Styles
-    2. Navigation Styles
-    3. Heading Styles
-    4. Body Styles
-    5. Footer Styles 
-    */
-
-    /* 1. Header Styles */
-
-
-    /* 2. Navigation Styles */
-    .navbar-nav{ 
-        left: -133%
-    }
     .navbar-brand {
         margin: 0 55% 0 0%;
     }
@@ -252,7 +327,9 @@ a {
 /*         border-radius: 0 15px 0 0; */
         
     }
-    
+    .content-nav-item {
+        font-size: 4vw;
+    }
     .content-nav-item:hover, .content-nav-item:hover>a {
         font-size: 4.25vw;
     }
@@ -260,9 +337,7 @@ a {
 
 
     /* 4. Body Styles */
-    .resourcesText, dd, dt {
-        font-size: 1.75vw;
-    }
+
 
     /* 5. Footer Styles */
     .form-label {
@@ -271,11 +346,6 @@ a {
 }
 
 
-@media only screen and (min-width: 768px){
-    .mapOfServices-info {
-        border-right: 2px solid var(--dnc-secondary4);
-    }
-}
 @media only screen and (min-width: 992px) {
     /* 
     1. Header Styles
@@ -289,16 +359,10 @@ a {
 
 
     /* 2. Navigation Styles */
-
-    .dropdown-menu {
-        position: relative;
-        display: none;
-        color:#fff;
-        background: #fff;
-        width: 250%;
-        left: -75%;
+   /*  .dropdown-menu {
         top: 65px
-    }
+    } */
+    
     .dropdown-menu::before {
         content: "";
         border-left: 50px solid transparent;
@@ -313,7 +377,6 @@ a {
          display: block;
          margin-top: 0; 
      }
-    
 
     .dropdown-item:hover, .dropdown-item:focus {
         background-color: var(--dnc-primary);
@@ -328,9 +391,17 @@ a {
         font-size: 1.25vw;
         text-align: unset;
     }
+
+    /* Resources Page */
+    .content-nav-item {
+        font-size: 3.25vw;
+    }
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size:2.25vw;
+    }
     .left-nav h4 {
-        border-radius: 0 10px 0 0;
         background-color: var(--dnc-secondary4);
+        border-radius: 0 10px 0 0;
         color: #e5ece3;
         font-size: 1.5vw;
         letter-spacing: 1px;
@@ -339,43 +410,29 @@ a {
         margin: 0;
         padding: 15px 20px;
     }
-
-    .left-nav {
-        padding: 0px;
-        border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
-        border-radius: 0 15px 0 0;
-        
-    }
-
+    
     .content-nav-header {
         font-size: 2vw;
     }
     .content-nav-item {
-        font-size: 1.25vw;
+        font-size: 2.25vw;
     }
     .content-nav-item>a {
         line-height: 5vw;
         vertical-align: middle;
         margin-top: 5%
     }
-    .content-nav-item {
-        font-size: 1.75vw;
-    }
     .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size: 2vw;
+        font-size:2.5vw;
     }
-    .tests {
-        margin-left: -0%;
-    }
+    
 
     /* 3. Heading Styles */
 
 
     /* 4. Body Styles */
 
-    .resourcesText, dd, dt {
-        font-size: 1.5vw;
-    }
+
     /* 5. Footer Styles */
 }
 @media only screen and (min-width: 1200px) {
@@ -393,48 +450,36 @@ a {
     /* 2. Navigation Styles */
     
     .navbar-brand {
-        /* width: 100px; */
-        margin: 0 10% 0 0%;
+        width: 120px;
+        margin: 0 20% 0 0%;
     }
     .navbar-brand > img {
-        margin-left: 50%
+        margin-left: 125%
     }
     .nav-link {
         font-size: 1.15vw;
         text-align: unset;
     }
+    /* Resources Page */
     .left-nav h4 {
-        background-color: var(--dnc-secondary4);
-        font-size: 1.25vw;
-        letter-spacing: 1px;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 15px 20px;
-    }
-    .left-nav {
-        padding: 0px;
-        border-right: 2px solid var(--dnc-secondary4); border-top: 2px solid var(--dnc-secondary4);
-        border-radius: 0 15px 0 0;
         
+        font-size: 1.5vw;
     }
     .content-nav-item {
-        font-size: 26px;
-    }
-    .content-nav-item>a {
-        vertical-align: middle;
-        margin-top: 10px;
+        font-size: 1.25vw;
     }
     .content-nav-item:hover, .content-nav-item:hover>a {
-        font-size: 30px;
+        font-size:1.5vw;
     }
+    .left-nav h4 {
+        font-size: 1.5vw;
+    }
+    
     /* 3. Heading Styles */
 
 
     /* 4. Body Styles */
-    .resourcesText, dd, dt {
-        font-size: 1.2vw;
-    }
+
 
     /* 5. Footer Styles */
 }
@@ -452,47 +497,34 @@ a {
 
 
     /* 2. Navigation Styles */
+    .dropdown-menu {
+        top: 85%;
+    }
     
     .navbar-brand {
-        margin: 0 15% 0 0%;
-    }
-    .navbar-brand > img {
-        margin-left: 100%
-    }
-    
-    
-    /* 3. Heading Styles */
-
-
-    /* 4. Body Styles */
-    .resourcesText, dd, dt {
-        font-size: .85vw;
-    }
-
-    /* 5. Footer Styles */
-}
-
-@media only screen and (min-width: 2000px) {
-    /* 
-    1. Header Styles
-    2. Navigation Styles
-    3. Heading Styles
-    4. Body Styles
-    5. Footer Styles 
-    */
-
-    /* 1. Header Styles */
-
-
-    /* 2. Navigation Styles */
-    
-    .navbar-brand {
+        width: 120px;
         margin: 0 20% 0 0%;
     }
     .navbar-brand > img {
-        margin-left: 300%
+        margin-left: 125%
     }
-    
+    .nav-link {
+        font-size: 1.15vw;
+        text-align: unset;
+    }
+    /* Resources Page */
+    .left-nav h4 {
+        font-size: 1.5vw;
+    }
+    .content-nav-item {
+        font-size: 1vw;
+    }
+    .content-nav-item:hover, .content-nav-item:hover>a {
+        font-size:1.25vw;
+    }
+    .left-nav h4 {
+        font-size: 1.5vw;
+    }
     
     /* 3. Heading Styles */
 
@@ -501,4 +533,6 @@ a {
 
 
     /* 5. Footer Styles */
+
+    
 }
