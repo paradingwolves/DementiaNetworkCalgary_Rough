@@ -35,7 +35,7 @@
                     </select>
                 </div>
                 <div class="add-event-input">
-                    <input type="text" class="addEvent-Desc" placeholder="Description..." />
+                    <input type="text" class="addEvent-desc" placeholder="Description..." />
                 </div>
             </div>
             <div class="add-event-footer">

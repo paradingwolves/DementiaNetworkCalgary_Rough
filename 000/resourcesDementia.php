@@ -166,7 +166,7 @@
                                 <a href="https://dementianetworkcalgary.ca/wp-content/uploads/2022/12/Resource-guide-for-people-at-risk-of-going-missing-Arabic-1.pdf" target="_blank">(Arabic) العربية </a>
                             </div>
                             <div class="col-sm-12 col-md-4 col-lg-3 my-3">
-                                <a href="https://dementianetworkcalgary.ca/wp-content/uploads/2022/12/Cantonese_-Resource-guide-for-people-at-risk-of-going-missing.pdf" target="_blank">廣東話 (Cantonese)</a>
+                                <a href="https://dementianetworkcalgary.ca/wp-content/uploads/2022/12/Cantonese_-Resource-guide-for-people-at-risk-of-going-missing.pdf" target="_blank">简体字 (Simplified Chinese)</a>
                             </div>
 
                             <div class="col-sm-12 col-md-4 col-lg-3 my-3">
